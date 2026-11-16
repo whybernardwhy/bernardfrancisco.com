@@ -1,274 +1,1218 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-time="day">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Bernard Francisco | Senior Partner Program Manager</title>
-<meta name="description" content="Bernard Francisco runs delivery programs for implementation partners on AI and contact center platforms. 13 partners, 700+ partner-led engagements, 19 years in customer experience. Based in Metro Manila.">
-<link rel="canonical" href="https://bernardfrancisco.com/">
-<meta property="og:type" content="website">
-<meta property="og:url" content="https://bernardfrancisco.com/">
-<meta property="og:title" content="Bernard Francisco | Senior Partner Program Manager">
-<meta property="og:description" content="I run delivery programs for implementation partners on AI and contact center platforms, from partner selection to go-live.">
-<meta name="twitter:card" content="summary">
-<meta name="theme-color" content="#F1F4F3">
-<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<meta name="description" content="Bernard Francisco runs partner-led delivery for AI and contact center platforms. Ask his AI assistant anything.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap" rel="stylesheet">
-<script type="application/ld+json">
-{"@context":"https://schema.org","@type":"Person","name":"Bernard Francisco","jobTitle":"Senior Partner Program Manager","url":"https://bernardfrancisco.com/","address":{"@type":"PostalAddress","addressLocality":"Metro Manila","addressCountry":"PH"},"sameAs":["https://www.linkedin.com/in/bernardfrancisco"]}
-</script>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
 :root{
-  --bg:#F1F4F3;
-  --paper:#FFFFFF;
-  --ink:#15232A;
-  --muted:#56676D;
-  --rule:#D3DBDA;
-  --accent:#1F55D0;
-  --accent-soft:#E3EAFB;
-  --sans:"Schibsted Grotesk",system-ui,-apple-system,"Segoe UI",sans-serif;
-  --serif:"Source Serif 4",Georgia,"Times New Roman",serif;
-  --wrap:1080px;
+  --paper:#FBFBF8;--white:#FFFFFF;--ink:#1B1F3B;--ink-soft:#5A6080;--signal:#FF5A1F;--ai:#12B5A6;--rule:#E3E5EC;
+  --glass:rgba(255,255,255,.62);--glass-edge:rgba(255,255,255,.9);--glass-shadow:0 20px 60px rgba(27,31,59,.14);
+  --wall:#86CFC7;--wall-dark:#6DBDB4;--ceiling:#FFFFFF;--floor:#FF6B3D;--floor-dark:#E9572B;
+  --sky1:#BFE6FF;--sky2:#EAF7FF;--city:#9DB8CF;--citylit:0;--lamp:0;--sun:1;
+  --display:"Sora",system-ui,sans-serif;--body:"Sora",system-ui,-apple-system,"Segoe UI",sans-serif;
 }
+html[data-time="golden"]{--wall:#7CC0B4;--wall-dark:#62A99D;--floor:#F2602F;--floor-dark:#D94F22;--sky1:#FFB36B;--sky2:#FFE1B8;--city:#B38C78;--citylit:.35;--lamp:.45;--sun:.7}
+html[data-time="night"]{
+  --paper:#151A3D;--white:#1E2550;--ink:#FFFFFF;--ink-soft:#B4BAE0;--signal:#FF6B2C;--ai:#3EE6D2;--rule:#2C3466;
+  --glass:rgba(30,37,80,.62);--glass-edge:rgba(255,255,255,.18);--glass-shadow:0 20px 60px rgba(0,0,0,.45);
+  --wall:#1F4250;--wall-dark:#173540;--ceiling:#2B3366;--floor:#A8401E;--floor-dark:#8A3216;
+  --sky1:#0C1233;--sky2:#1C2556;--city:#2A3366;--citylit:1;--lamp:1;--sun:0}
 *,*::before,*::after{box-sizing:border-box}
-html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
-body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--serif);font-size:1.125rem;line-height:1.6}
-a{color:inherit}
-:focus-visible{outline:3px solid var(--accent);outline-offset:3px;border-radius:2px}
-.wrap{max-width:var(--wrap);margin:0 auto;padding:0 24px}
-h1,h2,h3,.sans{font-family:var(--sans)}
-h2{font-size:1.75rem;line-height:1.2;font-weight:700;letter-spacing:-.01em;margin:0 0 8px}
-.lede{color:var(--muted);margin:0 0 40px;max-width:60ch}
-section{padding:88px 0;border-top:1px solid var(--rule)}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--body);font-size:1rem;line-height:1.6;transition:background .8s,color .8s}
+button,input{font:inherit;color:inherit}
+:focus-visible{outline:3px solid var(--ai);outline-offset:3px;border-radius:8px}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+.glass{background:var(--glass);-webkit-backdrop-filter:blur(18px) saturate(140%);backdrop-filter:blur(18px) saturate(140%);border:1px solid var(--glass-edge);box-shadow:var(--glass-shadow),inset 0 1px 0 rgba(255,255,255,.7);border-radius:28px}
+html[data-time="night"] .glass{box-shadow:var(--glass-shadow),inset 0 1px 0 rgba(255,255,255,.12)}
 
 /* header */
-.top{display:flex;justify-content:space-between;align-items:center;padding:24px 0}
-.mark{font-family:var(--sans);font-weight:700;text-decoration:none;font-size:1rem}
-.top nav{display:flex;gap:24px;font-family:var(--sans);font-size:.95rem}
-.top nav a{text-decoration:none;color:var(--muted)}
-.top nav a:hover{color:var(--ink)}
+.top{position:fixed;inset:0 0 auto 0;z-index:20;display:flex;align-items:center;justify-content:space-between;padding:14px 24px;pointer-events:none}
+.top>*{pointer-events:auto}
+.mark{font-family:var(--display);font-weight:700;font-size:.95rem;text-decoration:none;color:var(--ink);letter-spacing:-.01em}
+.tools{display:flex;gap:8px}
+.chip-btn{border:1px solid var(--glass-edge);background:var(--glass);-webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px);border-radius:999px;padding:8px 14px;font-size:.85rem;font-weight:500;cursor:pointer;display:inline-flex;gap:6px;align-items:center}
+.chip-btn svg{width:16px;height:16px}
 
 /* hero */
-.hero{display:grid;grid-template-columns:1.15fr .85fr;gap:48px;align-items:center;padding:56px 0 96px}
-.hero h1{font-size:clamp(2.75rem,6.4vw,4.75rem);line-height:.98;letter-spacing:-.035em;font-weight:700;margin:0 0 20px}
-.role{font-family:var(--sans);font-size:1.2rem;font-weight:600;color:var(--accent);margin:0 0 20px}
-.hero p.intro{font-size:1.25rem;line-height:1.55;max-width:34ch;margin:0 0 32px}
-.actions{display:flex;flex-wrap:wrap;gap:12px}
-.btn{font-family:var(--sans);font-weight:600;font-size:1rem;text-decoration:none;padding:13px 22px;border-radius:999px;border:2px solid var(--ink);display:inline-block}
-.btn.primary{background:var(--ink);color:#fff}
-.btn.primary:hover{background:var(--accent);border-color:var(--accent)}
-.btn.ghost:hover{border-color:var(--accent);color:var(--accent)}
-figure.net{margin:0}
-figure.net svg{width:100%;height:auto;display:block}
-figure.net figcaption{font-family:var(--sans);font-size:.95rem;color:var(--muted);text-align:center;margin-top:8px}
-.spoke{stroke:var(--rule);stroke-width:1.5;stroke-dasharray:140;stroke-dashoffset:140;animation:draw .7s ease-out forwards}
-.node{fill:var(--paper);stroke:var(--ink);stroke-width:2;animation:light .4s ease-out forwards}
-.hub{fill:var(--ink)}
-.hubtxt{font-family:var(--sans);font-size:15px;font-weight:600;fill:#fff}
-@keyframes draw{to{stroke-dashoffset:0;stroke:#9DB1D9}}
-@keyframes light{to{fill:var(--accent);stroke:var(--accent)}}
+.hero{position:relative;min-height:100vh;min-height:100svh;overflow:hidden}
+.room{position:absolute;inset:0;width:100%;height:100%}
+.room *{transition:fill .9s, opacity .9s}
+.hero-inner{position:relative;z-index:2;max-width:1240px;margin:0 auto;min-height:100vh;min-height:100svh;display:grid;grid-template-columns:minmax(0,480px) 1fr;align-items:center;gap:24px;padding:84px 24px 40px}
+.panel{padding:28px}
+.kicker{font-size:.95rem;color:var(--ink-soft);margin:0 0 6px}
+h1{font-family:var(--display);font-weight:700;font-size:clamp(2.1rem,4.4vw,3.5rem);line-height:1.02;letter-spacing:-.03em;margin:0 0 10px}
+.role{font-weight:600;color:var(--signal);margin:0 0 12px}
+.pitch{margin:0 0 22px;max-width:36ch}
+.ivr-q{font-weight:600;margin:0 0 10px}
+.ivr{display:grid;gap:10px}
+.ivr button{display:flex;align-items:center;gap:12px;text-align:left;border:1px solid var(--rule);background:var(--white);border-radius:999px;padding:12px 16px;cursor:pointer;transition:transform .15s,border-color .15s}
+.ivr button:hover{transform:translateX(4px);border-color:var(--ai)}
+.ivr .key{width:30px;height:30px;flex:none;border-radius:50%;display:grid;place-items:center;background:var(--ink);color:var(--paper);font-family:var(--display);font-size:.8rem}
+.stage{position:relative;height:min(72vh,640px);display:flex;align-items:flex-end;justify-content:center}
+#orbit{height:100%;max-height:600px;width:auto;overflow:visible;cursor:pointer;touch-action:manipulation;filter:drop-shadow(0 18px 18px rgba(27,31,59,.18))}
+
+/* engine */
+.engine{position:absolute;right:0;top:12%;width:230px;padding:16px 18px;opacity:0;transform:translateY(10px);transition:.4s}
+.engine.on{opacity:1;transform:none}
+.engine h2{font-size:.85rem;font-weight:600;margin:0 0 10px;color:var(--ink-soft)}
+.step{display:flex;justify-content:space-between;gap:8px;font-size:.88rem;padding:7px 10px;border-radius:12px;margin-bottom:6px;border:1px solid var(--rule);color:var(--ink-soft);transition:.25s}
+.step b{font-weight:600;color:var(--ink);text-align:right;max-width:60%;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.step.lit{border-color:var(--ai);background:color-mix(in srgb,var(--ai) 14%,transparent);color:var(--ink)}
+
+/* chat */
+.chat{display:none}
+.chat.on{display:block}
+.log{max-height:240px;overflow-y:auto;display:flex;flex-direction:column;gap:8px;margin:0 0 12px;padding-right:4px}
+.msg{padding:10px 14px;border-radius:18px;max-width:92%;font-size:.98rem}
+.msg.bot{background:var(--white);border:1px solid var(--rule);align-self:flex-start;border-bottom-left-radius:6px}
+.msg.me{background:var(--ink);color:var(--paper);align-self:flex-end;border-bottom-right-radius:6px}
+.msg a{color:var(--signal);font-weight:600}
+.suggest{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:10px}
+.suggest button{border:1px solid var(--rule);background:transparent;border-radius:999px;padding:6px 12px;font-size:.88rem;cursor:pointer}
+.suggest button:hover{border-color:var(--ai)}
+.ask{display:flex;gap:8px}
+.ask input{flex:1;min-width:0;border:1px solid var(--rule);background:var(--white);border-radius:999px;padding:11px 16px}
+.round{width:44px;height:44px;flex:none;border-radius:50%;border:0;display:grid;place-items:center;cursor:pointer}
+.round svg{width:18px;height:18px}
+.send{background:var(--ink);color:var(--paper)}
+.mic{background:var(--white);border:1px solid var(--rule)}
+.mic.rec{background:var(--signal);color:#fff;border-color:var(--signal)}
+.wrapbtn{margin-top:10px;border:0;background:var(--signal);color:#fff;border-radius:999px;padding:10px 16px;font-weight:600;cursor:pointer;display:none}
+.wrapbtn.on{display:inline-block}
+
+/* sections */
+.wrap{max-width:1140px;margin:0 auto;padding:0 24px}
+section.blk{padding:96px 0}
+h2.big{font-family:var(--display);font-weight:700;font-size:clamp(1.6rem,3vw,2.3rem);letter-spacing:-.02em;line-height:1.1;margin:0 0 10px}
+.lede{color:var(--ink-soft);max-width:60ch;margin:0 0 36px}
+.cards{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}
+.card{background:var(--white);border:1px solid var(--rule);border-radius:32px;padding:28px;transition:transform .2s,border-color .2s,box-shadow .2s}
+.card:hover{transform:translateY(-4px);border-color:var(--ai)}
+.card.flash{box-shadow:0 0 0 4px color-mix(in srgb,var(--ai) 40%,transparent)}
+.card .where{font-size:.9rem;color:var(--ink-soft);margin:0 0 6px}
+.card h3{font-size:1.25rem;line-height:1.25;margin:0 0 10px;font-weight:600}
+.card p{margin:0 0 12px;color:var(--ink-soft)}
+.res{display:flex;gap:16px;flex-wrap:wrap;margin-top:14px}
+.res div{background:var(--paper);border-radius:20px;padding:12px 16px}
+.res b{display:block;font-family:var(--display);font-size:1.35rem;color:var(--signal);font-weight:700}
+.res span{font-size:.85rem;color:var(--ink-soft)}
+.about{display:grid;grid-template-columns:auto minmax(0,1fr);gap:48px;align-items:center}
+.port{position:relative;width:240px;height:240px;border-radius:50%;padding:14px;background:var(--rule);box-shadow:inset 0 0 0 3px var(--white)}
+.port img{width:100%;height:100%;border-radius:50%;object-fit:cover;display:block}
+.port .badge{position:absolute;right:4px;bottom:16px;width:58px;height:58px;border-radius:50%;background:var(--white);border:2px solid var(--ink);display:grid;place-items:center}
+.port .badge i{width:38px;height:24px;border-radius:12px;background:#1B1F3B;display:flex;gap:7px;align-items:center;justify-content:center}
+.port .badge i::before,.port .badge i::after{content:"";width:6px;height:8px;border-radius:50%;background:#3EE6D2}
+.about p{margin:0 0 14px;max-width:62ch}
+.tl{list-style:none;margin:0;padding:0;display:grid;gap:0}
+.tl li{display:grid;grid-template-columns:120px minmax(0,1fr);gap:20px;padding:16px 0;border-top:1px solid var(--rule)}
+.tl .y{font-variant-numeric:tabular-nums;color:var(--ink-soft)}
+.tl b{font-weight:600}
+.tl span{color:var(--ink-soft)}
+.certs{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.certs>*{border:1px solid var(--rule);border-radius:999px;padding:14px 22px}
+.certs b{font-weight:600;display:block}
+.certs span{color:var(--ink-soft);font-size:.92rem}
+.contact{background:var(--ink);color:var(--paper);border-radius:48px 48px 0 0;padding:88px 0 56px}
+html[data-time="night"] .contact{background:#0C1030;color:#fff}
+.contact h2{color:inherit}
+.contact p{opacity:.8;max-width:56ch;margin:0 0 28px}
+.cta{display:flex;gap:12px;flex-wrap:wrap}
+.cta a{border-radius:999px;padding:13px 22px;font-weight:600;text-decoration:none;border:2px solid currentColor;color:inherit}
+.cta a.pri{background:var(--signal);border-color:var(--signal);color:#fff}
+
+/* summary overlay */
+.sum{position:fixed;inset:0;z-index:30;display:none;place-items:center;background:rgba(10,12,30,.35);padding:20px}
+.sum.on{display:grid}
+.sum .glass{max-width:440px;width:100%;padding:28px;animation:pop .35s ease}
+@keyframes pop{from{transform:translateY(20px) scale(.96);opacity:0}}
+.ticket{border:1px dashed var(--ink-soft);border-radius:20px;padding:16px;margin:14px 0;font-size:.95rem}
+.ticket ul{margin:6px 0 0;padding-left:18px}
+
+/* orbit parts */
+#orbit .pv{transform-box:view-box}
+#o-root{transform-origin:100px 350px}
+#o-head{transform-origin:100px 118px;transition:transform .35s ease}
+#o-armL{transform-origin:62px 140px;transition:transform .35s ease}
+#o-armR{transform-origin:138px 140px;transition:transform .35s ease}
+#o-legL{transform-origin:84px 238px}
+#o-legR{transform-origin:116px 238px}
+#o-eyes{transition:transform .12s linear}
+.face>g{opacity:0;transition:opacity .15s}
+#orbit.f-eyes .fe,#orbit.f-happy .fh,#orbit.f-think .ft,#orbit.f-speak .fs,#orbit.f-wink .fw,#orbit.f-shy .fe,#orbit.f-wow .fwow,#orbit.f-sleepy .fz{opacity:1}
+#orbit.f-shy .fe{opacity:.2}
+.fe ellipse{transform-box:fill-box;transform-origin:center;animation:blink 5s infinite}
+@keyframes blink{0%,94%,100%{transform:scaleY(1)}96%{transform:scaleY(.1)}}
+.ft circle{transform-box:view-box;transform-origin:100px 84px;animation:spin 1s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+.fs rect{transform-box:fill-box;transform-origin:center;animation:talk .35s ease-in-out infinite}
+.fs rect:nth-child(2){animation-delay:.1s}.fs rect:nth-child(3){animation-delay:.2s}.fs rect:nth-child(4){animation-delay:.05s}.fs rect:nth-child(5){animation-delay:.15s}
+@keyframes talk{0%,100%{transform:scaleY(.35)}50%{transform:scaleY(1.2)}}
+#chestlight{transition:fill .4s}
+html[data-time="night"] #visorGlow{opacity:.14}
+/* body states */
+#orbit.b-idle #o-root{animation:bob 3.2s ease-in-out infinite}
+@keyframes bob{0%,100%{transform:translateY(0)}50%{transform:translateY(-5px)}}
+#orbit.b-listen #o-head{transform:rotate(-9deg) translateX(-3px)}
+#orbit.b-listen #o-root{transform:rotate(-2deg)}
+#orbit.b-think #o-armR{transform:rotate(-125deg)}
+#orbit.b-think #o-head{transform:rotate(6deg)}
+#orbit.b-speak #o-root{animation:sway .9s ease-in-out infinite}
+@keyframes sway{0%,100%{transform:rotate(-1.5deg)}50%{transform:rotate(1.5deg)}}
+#orbit.b-wave #o-armR{animation:wave .45s ease-in-out 5 alternate}
+@keyframes wave{from{transform:rotate(-150deg)}to{transform:rotate(-115deg)}}
+#orbit.b-point #o-armL{transform:rotate(80deg)}
+#orbit.b-point #o-head{transform:rotate(-8deg)}
+#orbit.b-giggle #o-root{animation:gig .14s ease-in-out 8 alternate}
+@keyframes gig{from{transform:rotate(-3deg)}to{transform:rotate(3deg) translateY(-3px)}}
+#orbit.b-giggle #o-armL{transform:rotate(25deg)}#orbit.b-giggle #o-armR{transform:rotate(-25deg)}
+#orbit.b-dance #o-root{animation:hop .5s ease-in-out infinite}
+@keyframes hop{0%,100%{transform:translateY(0) rotate(0)}25%{transform:translateY(-16px) rotate(-6deg)}50%{transform:translateY(0) rotate(0)}75%{transform:translateY(-16px) rotate(6deg)}}
+#orbit.b-dance #o-armL{animation:swingL .5s ease-in-out infinite}
+#orbit.b-dance #o-armR{animation:swingR .5s ease-in-out infinite}
+@keyframes swingL{0%,100%{transform:rotate(40deg)}50%{transform:rotate(140deg)}}
+@keyframes swingR{0%,100%{transform:rotate(-140deg)}50%{transform:rotate(-40deg)}}
+#orbit.b-dance #o-legL{animation:kick .5s ease-in-out infinite}
+@keyframes kick{0%,100%{transform:rotate(0)}50%{transform:rotate(18deg)}}
+#orbit.b-shy #o-armL{transform:rotate(150deg)}#orbit.b-shy #o-armR{transform:rotate(-150deg)}
+#orbit.b-shy #o-head{transform:rotate(4deg) translateY(4px)}
+#orbit.b-shrug #o-armL{transform:rotate(55deg)}#orbit.b-shrug #o-armR{transform:rotate(-55deg)}
+#orbit.b-shrug #o-head{transform:rotate(-7deg)}
+#orbit.b-thumbs #o-armR{transform:rotate(-95deg)}
+#orbit.b-bow #o-root{animation:bow 1.2s ease-in-out}
+@keyframes bow{40%,60%{transform:rotate(14deg) translateY(10px)}}
+
+/* porthole iris transition */
+.iris{position:fixed;left:50%;top:50%;width:0;height:0;border-radius:50%;z-index:40;pointer-events:none;transform:translate(-50%,-50%);box-shadow:0 0 0 0 var(--wall);display:none}
+.iris.on{display:block;box-shadow:0 0 0 14px var(--white),0 0 0 22px var(--signal),0 0 0 300vmax var(--wall)}
+/* nav */
+section[id]{scroll-margin-top:76px}
+.top{transition:background .3s,box-shadow .3s}
+.top.scrolled{background:color-mix(in srgb,var(--paper) 82%,transparent);-webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px);box-shadow:0 1px 0 var(--rule)}
+.nav{display:flex;gap:2px;padding:4px;border-radius:999px;border:1px solid var(--glass-edge);background:var(--glass);-webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px)}
+.nav a{color:var(--ink);text-decoration:none;font-size:.85rem;font-weight:500;padding:7px 13px;border-radius:999px}
+.nav a:hover{background:color-mix(in srgb,var(--ai) 16%,transparent)}
+.menu-btn{display:none}
+/* case + partner cards */
+.cards{grid-template-columns:repeat(3,minmax(0,1fr))}
+.card{display:flex;flex-direction:column;text-decoration:none;color:inherit;cursor:pointer}
+.card .more{margin-top:auto;padding-top:14px;font-weight:600;color:var(--signal);font-size:.92rem}
+.tags{display:flex;gap:6px;flex-wrap:wrap;margin:0 0 12px}
+.tags span{font-size:.78rem;padding:3px 10px;border-radius:999px;border:1px solid var(--rule);color:var(--ink-soft)}
+.pgrid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px}
+.pcard{border:1px solid var(--rule);border-radius:24px;padding:20px;text-decoration:none;color:inherit;background:var(--white);display:flex;flex-direction:column;gap:6px;transition:transform .2s,border-color .2s}
+.pcard:hover{transform:translateY(-3px);border-color:var(--ai)}
+.pcard small{color:var(--ink-soft);font-size:.82rem}
+.pcard b{font-weight:600;line-height:1.3}
+.pcard i{font-style:normal;font-family:var(--display);font-weight:700;color:var(--signal);font-size:1.15rem;margin-top:auto;padding-top:8px}
+.pcard i span{display:block;font-family:var(--body);font-weight:400;font-size:.8rem;color:var(--ink-soft)}
+.certs a{color:inherit;text-decoration:none;display:block}
+.certs a:hover{border-color:var(--ai)}
+.certs em{font-style:normal;color:var(--signal);font-weight:600;font-size:.85rem;margin-left:6px}
+/* detail page */
+.detail{position:fixed;inset:0;z-index:25;background:var(--paper);overflow-y:auto;display:none;padding:84px 24px 80px}
+.detail.on{display:block;animation:pop .3s ease}
+.dwrap{max-width:760px;margin:0 auto}
+.dback{display:inline-flex;gap:6px;align-items:center;border:1px solid var(--rule);background:var(--white);border-radius:999px;padding:8px 16px;font-weight:500;cursor:pointer;margin-bottom:28px}
+.detail .where{color:var(--ink-soft);margin:0 0 8px}
+.detail h1{font-size:clamp(1.8rem,4vw,2.7rem);margin:0 0 16px}
+.detail h2{font-size:1.05rem;font-weight:600;margin:32px 0 8px}
+.detail p,.detail li{color:var(--ink);max-width:68ch}
+.detail ul{padding-left:20px;margin:0}.detail li{margin-bottom:8px}
+.detail .shows{border-left:4px solid var(--ai);padding:4px 0 4px 16px;margin-top:28px;font-weight:500}
+.detail .res{margin:22px 0 6px}
+.dnav{display:flex;justify-content:space-between;gap:12px;margin-top:48px;padding-top:20px;border-top:1px solid var(--rule)}
+.dnav a,.rel a{color:var(--signal);font-weight:600;text-decoration:none}
+.rel{display:flex;flex-wrap:wrap;gap:8px}
+.rel a{border:1px solid var(--rule);border-radius:999px;padding:6px 12px;font-size:.9rem}
+.note{font-size:.85rem;color:var(--ink-soft);margin-top:36px}
+.chips{display:flex;flex-wrap:wrap;gap:6px;margin-top:8px}
+.chips a{font-size:.85rem;border:1px solid var(--rule);border-radius:999px;padding:5px 10px;text-decoration:none;color:var(--ink)}
+.chips a:hover{border-color:var(--ai)}
+.disc{font-size:.78rem;color:var(--ink-soft);margin:8px 0 0}
+@keyframes pop{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+
 @media (prefers-reduced-motion:reduce){
-  .spoke{animation:none;stroke-dashoffset:0;stroke:#9DB1D9}
-  .node{animation:none;fill:var(--accent);stroke:var(--accent)}
+  #orbit [id^="o-"]{animation:none!important}
   html{scroll-behavior:auto}
 }
-
-/* about */
-.about{display:grid;grid-template-columns:1fr 1.6fr;gap:48px}
-.about p{margin:0 0 16px;max-width:62ch}
-
-/* work */
-.case{display:grid;grid-template-columns:220px 1fr;gap:32px;padding:36px 0;border-top:1px solid var(--rule)}
-.case:first-of-type{border-top:0;padding-top:0}
-.case .when{font-family:var(--sans);font-size:.95rem;color:var(--muted);padding-top:4px}
-.case .when strong{display:block;color:var(--ink);font-weight:600;font-size:1rem}
-.case h3{font-size:1.35rem;line-height:1.25;margin:0 0 10px;font-weight:700;letter-spacing:-.01em}
-.case p{margin:0 0 12px;max-width:62ch}
-.result{background:var(--paper);border-left:4px solid var(--accent);padding:14px 18px;margin-top:16px;max-width:62ch}
-.result b{font-family:var(--sans);font-weight:600}
-
-/* timeline */
-.timeline{list-style:none;margin:0;padding:0;position:relative}
-.timeline::before{content:"";position:absolute;left:6px;top:8px;bottom:8px;width:2px;background:var(--rule)}
-.timeline li{position:relative;padding:0 0 28px 36px;display:grid;grid-template-columns:1fr auto;gap:4px 24px}
-.timeline li::before{content:"";position:absolute;left:0;top:7px;width:14px;height:14px;border-radius:50%;background:var(--bg);border:2px solid var(--muted)}
-.timeline li.now::before{background:var(--accent);border-color:var(--accent)}
-.timeline .co{font-family:var(--sans);font-weight:600;font-size:1.1rem}
-.timeline .yr{font-family:var(--sans);color:var(--muted);font-size:.95rem;font-variant-numeric:tabular-nums}
-.timeline .ti{grid-column:1/-1;color:var(--muted);font-size:1rem}
-
-/* certs */
-.certs{display:grid;grid-template-columns:repeat(2,1fr);gap:0 48px;margin:0;padding:0;list-style:none}
-.certs li{padding:16px 0;border-top:1px solid var(--rule)}
-.certs .n{font-family:var(--sans);font-weight:600;display:block;font-size:1.05rem}
-.certs .d{color:var(--muted);font-size:1rem}
-
-/* contact */
-.contact{background:var(--ink);color:#fff;border-top:0}
-.contact h2{font-size:clamp(2rem,4.5vw,3rem);letter-spacing:-.03em;line-height:1.05;max-width:18ch;margin-bottom:20px}
-.contact p{color:#C3CDD0;max-width:56ch;margin:0 0 32px}
-.contact .btn{border-color:#fff;color:#fff}
-.contact .btn.primary{background:#fff;color:var(--ink)}
-.contact .btn.primary:hover{background:var(--accent-soft);border-color:var(--accent-soft)}
-.contact .btn.ghost:hover{color:#fff;border-color:#9DB1D9}
-footer{background:var(--ink);color:#8A9A9F;font-family:var(--sans);font-size:.9rem;padding:0 0 40px}
-
-@media (max-width:820px){
-  .hero{grid-template-columns:1fr;gap:32px;padding:24px 0 64px}
-  figure.net{max-width:340px;margin:0 auto}
-  .about{grid-template-columns:1fr;gap:16px}
-  .case{grid-template-columns:1fr;gap:8px}
-  .certs{grid-template-columns:1fr}
-  section{padding:64px 0}
-  .top nav{display:none}
+@media (max-width:1100px){.pgrid{grid-template-columns:repeat(3,minmax(0,1fr))}.cards{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:860px){
+  .chip-btn span{display:none}.chip-btn{padding:9px}.mark{font-size:.85rem}
+  .hero-inner{grid-template-columns:1fr;padding-top:72px;gap:0}
+  .stage{order:-1;height:42vh;min-height:280px}
+  .engine{position:relative;right:auto;top:auto;width:100%;margin:12px 0 0;display:none}
+  .engine.on{display:block}
+  .cards,.certs{grid-template-columns:1fr}
+  .pgrid{grid-template-columns:1fr 1fr}
+  .nav{display:none;position:absolute;top:58px;right:16px;flex-direction:column;border-radius:20px;padding:8px}
+  .nav.open{display:flex}
+  .menu-btn{display:inline-flex}
+  .about{grid-template-columns:1fr;gap:28px;justify-items:start}
+  .port{width:190px;height:190px}
+  .tl li{grid-template-columns:1fr;gap:2px}
+  .panel{padding:22px}
+  section.blk{padding:72px 0}
 }
-@media (max-width:420px){
-  body{font-size:1.0625rem}
-  .timeline li{grid-template-columns:1fr}
-}
+
+/* ===== v3 theme: instrument panel with jet-age curves ===== */
+:root{--paper:#EEEDE7;--white:#F9F9F5;--ink:#1C1C1E;--ink-soft:#6B6B66;--signal:#F2541B;--ai:#0F9E8E;--rule:#D3D2CA;
+  --glass:rgba(249,249,245,.8);--glass-edge:rgba(255,255,255,.95);--glass-shadow:0 1px 0 rgba(255,255,255,.9) inset,0 24px 50px -18px rgba(28,28,30,.28),0 2px 6px rgba(28,28,30,.08);
+  --face:#E4E3DC;--curve:#F8F8F4;--curve-lo:#E9E8E1;--grille:#1C1C1E;--grille-o:.5;--wall:#E4E3DC;
+  --sky1:#9CCBEE;--sky2:#E6F2FA;--city:#C9D3DA;--lamp:0;--sun:1}
+html[data-time="golden"]{--paper:#EFEBE2;--face:#E3D9C8;--curve:#FAF3E7;--curve-lo:#EBDFCC;--wall:#E3D9C8;--sky1:#F29A52;--sky2:#FBDDB2;--city:#B9937A;--lamp:.55;--sun:.85;--grille-o:.45}
+html[data-time="night"]{--paper:#131315;--white:#1C1C1F;--ink:#F1F0EA;--ink-soft:#9A9A94;--signal:#FF6A2B;--ai:#3EE6D2;--rule:#2E2E32;
+  --glass:rgba(28,28,31,.78);--glass-edge:rgba(255,255,255,.1);--glass-shadow:0 1px 0 rgba(255,255,255,.06) inset,0 24px 50px -18px rgba(0,0,0,.7);
+  --face:#17171A;--curve:#232327;--curve-lo:#19191C;--grille:#F1F0EA;--grille-o:.2;--wall:#17171A;--sky1:#0A0F2A;--sky2:#1B2350;--city:#2B3154;--lamp:.8;--sun:0}
+body{font-size:.98rem;letter-spacing:-.005em}
+.glass{border-radius:20px;-webkit-backdrop-filter:blur(16px) saturate(120%);backdrop-filter:blur(16px) saturate(120%);box-shadow:var(--glass-shadow)}
+html[data-time="night"] .glass{box-shadow:var(--glass-shadow)}
+.mark{font-weight:600;letter-spacing:-.02em}
+.nav,.chip-btn{border-radius:10px;border-color:var(--rule);background:var(--glass)}
+.nav a{border-radius:7px;font-size:.82rem}
+h1{font-weight:600;letter-spacing:-.045em;font-size:clamp(2.2rem,4.6vw,3.7rem)}
+h2.big{font-weight:600;letter-spacing:-.035em}
+.kicker{font-size:.85rem;text-transform:lowercase;letter-spacing:.02em}
+.role{font-size:.9rem;font-weight:500;color:var(--ink-soft);display:flex;align-items:center;gap:8px}
+.role::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--signal);box-shadow:0 0 0 3px color-mix(in srgb,var(--signal) 22%,transparent)}
+.ivr{gap:8px}
+.ivr button{border-radius:12px;padding:11px 14px;background:linear-gradient(var(--white),color-mix(in srgb,var(--white) 88%,var(--ink)));box-shadow:0 1px 0 rgba(255,255,255,.7) inset,0 1px 2px rgba(28,28,30,.12);font-weight:500}
+.ivr button:hover{transform:none;border-color:var(--ink)}
+.ivr button:active{transform:translateY(1px);box-shadow:none}
+.ivr .key{border-radius:7px;width:28px;height:28px;font-size:.78rem;font-weight:600}
+.ivr button:first-child .key{background:var(--signal);color:#fff}
+.engine{width:236px;padding:14px 16px 12px;top:8%}
+.engine h2{font-size:.72rem;letter-spacing:.14em;font-weight:500;margin:0 0 2px}
+.gauge{width:100%;display:block;margin-bottom:8px}
+.gauge .gl{font-size:9px;fill:var(--ink-soft);font-family:var(--body)}
+#needle{transform-box:view-box;transform-origin:100px 100px;transform:rotate(-90deg);transition:transform .7s cubic-bezier(.3,1.5,.5,1)}
+.step{border:0;border-top:1px solid var(--rule);border-radius:0;margin:0;padding:8px 2px;font-size:.8rem;align-items:center}
+.step::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--rule);flex:none;margin-right:2px;transition:.25s}
+.step{justify-content:flex-start}.step b{margin-left:auto;font-weight:500}
+.step.lit{background:none;border-color:var(--rule)}
+.step.lit::before{background:var(--ai);box-shadow:0 0 0 3px color-mix(in srgb,var(--ai) 25%,transparent),0 0 10px var(--ai)}
+.msg{border-radius:12px;font-size:.93rem}.msg.bot{border-bottom-left-radius:3px}.msg.me{border-bottom-right-radius:3px}
+.suggest button,.chips a,.tags span,.rel a,.dback{border-radius:8px}
+.ask input{border-radius:10px}.round{border-radius:10px}
+.wrapbtn{border-radius:10px;background:var(--ink);color:var(--paper)}
+.card{border-radius:16px;padding:24px;box-shadow:0 1px 0 rgba(255,255,255,.8) inset}
+.card:hover,.pcard:hover{border-color:var(--ink);transform:translateY(-2px)}
+.card h3{font-weight:600;letter-spacing:-.02em}
+.card .more{color:var(--ink);display:flex;align-items:center;gap:8px}
+.card .more::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--signal)}
+.res{gap:10px}
+.res div{border-radius:10px;border:1px solid var(--rule);background:transparent;padding:10px 14px}
+.res b{color:var(--ink);font-weight:600;font-size:1.25rem;letter-spacing:-.03em;font-variant-numeric:tabular-nums}
+.pcard{border-radius:14px}.pcard i{color:var(--ink);font-weight:600;letter-spacing:-.03em}
+.pcard i::before{content:"";display:inline-block;width:7px;height:7px;border-radius:50%;background:var(--signal);margin-right:8px;vertical-align:middle}
+.port{padding:10px;background:var(--curve-lo);box-shadow:0 0 0 1px var(--rule),0 20px 40px -20px rgba(28,28,30,.4)}
+.port .badge{display:none}
+.certs>*{border-radius:12px}
+.contact{border-radius:50% 50% 0 0/70px 70px 0 0;padding-top:110px}
+html[data-time="night"] .contact{background:#0B0B0D}
+.cta a,.lane-cta{border-radius:10px}
+.sum .glass{border-radius:18px}.ticket{border-radius:10px}
+.detail h1{font-weight:600}.detail .shows{border-left-color:var(--signal)}
+.iris.on{box-shadow:0 0 0 10px var(--curve),0 0 0 13px var(--signal),0 0 0 300vmax var(--face)}
+.lanes{display:grid;grid-template-columns:1fr 1.6fr;gap:16px}
+.lane{border:1px solid var(--rule);border-radius:16px;padding:26px;background:var(--white);display:flex;flex-direction:column}
+.lane h3{margin:0 0 10px;font-weight:600;letter-spacing:-.02em;font-size:1.2rem}
+.lane p,.lane li{color:var(--ink-soft)}.lane li b{color:var(--ink);font-weight:600}
+.lane ul{padding-left:18px;margin:0 0 6px}.lane li{margin-bottom:8px}
+.lane-cta{margin-top:auto;align-self:flex-start;background:var(--ink);color:var(--paper);text-decoration:none;padding:11px 18px;font-weight:600}
+.lane:last-child .lane-cta{background:var(--signal);color:#fff}
+@media (max-width:860px){.lanes{grid-template-columns:1fr}.engine{width:100%}.gauge{max-width:220px;margin:0 auto 8px}}
+
+/* ===== living backdrop ===== */
+:root{--band:#1C1C1E;--ai-lamp:#3EE6D2}
+html[data-time="golden"]{--band:#2A211B}
+html[data-time="night"]{--band:#0A0A0C}
+.tok{font:500 13px var(--body);fill:var(--ink)}
+.wave{animation:flow 14s linear infinite}
+.w2{animation-duration:9s}.w3{animation-duration:20s;animation-direction:reverse}
+@keyframes flow{to{transform:translateX(-800px)}}
+.wavebox{transform-box:fill-box;transform-origin:center;transform:scaleY(.55);transition:transform .5s ease}
+html.speaking .wavebox{transform:scaleY(1.7)}
+html.listening .wavebox{transform:scaleY(.9)}
+.rings circle{transform-box:fill-box;transform-origin:center;opacity:0;animation:ring 3.6s ease-out infinite}
+@keyframes ring{0%{transform:scale(.25);opacity:.0}15%{opacity:.16}100%{transform:scale(1);opacity:0}}
+html.speaking .rings circle{animation-duration:1.8s;stroke-width:3}
+@keyframes ringloud{0%{transform:scale(.25);opacity:0}15%{opacity:.55}100%{transform:scale(1);opacity:0}}
+html.speaking .rings circle{animation-name:ringloud}
+@media (prefers-reduced-motion:reduce){.wave,.rings circle{animation:none}}
+
+/* ===== liquid glass ===== */
+:root{--glass:rgba(255,255,255,.38);--glass-edge:rgba(255,255,255,.85)}
+html[data-time="golden"]{--glass:rgba(255,250,240,.36)}
+html[data-time="night"]{--glass:rgba(40,40,46,.42);--glass-edge:rgba(255,255,255,.16)}
+.glass,.nav,.chip-btn{position:relative;background:linear-gradient(135deg,color-mix(in srgb,var(--glass) 140%,transparent),var(--glass) 45%,color-mix(in srgb,var(--glass) 70%,transparent));
+  -webkit-backdrop-filter:blur(22px) saturate(180%) brightness(1.06);backdrop-filter:blur(22px) saturate(180%) brightness(1.06);
+  border:1px solid var(--glass-edge);
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.9),inset 0 -1px 0 rgba(255,255,255,.25),inset 0 0 22px rgba(255,255,255,.18),0 26px 60px -22px rgba(28,28,30,.4),0 2px 8px rgba(28,28,30,.08)}
+html[data-time="night"] .glass,html[data-time="night"] .nav,html[data-time="night"] .chip-btn{box-shadow:inset 0 1px 0 rgba(255,255,255,.22),inset 0 0 22px rgba(255,255,255,.04),0 26px 60px -22px rgba(0,0,0,.8)}
+.glass::before{content:"";position:absolute;inset:0;border-radius:inherit;pointer-events:none;background:radial-gradient(120% 60% at 12% 0%,rgba(255,255,255,.55),transparent 60%);opacity:.6}
+html[data-time="night"] .glass::before{opacity:.12}
+.glass>*{position:relative}
+.engine.glass{position:absolute}
+.ivr button{background:linear-gradient(rgba(255,255,255,.75),rgba(255,255,255,.45));border-color:rgba(255,255,255,.9)}
+html[data-time="night"] .ivr button{background:linear-gradient(rgba(255,255,255,.1),rgba(255,255,255,.04));border-color:rgba(255,255,255,.14)}
+.msg.bot,.ask input,.mic{background:rgba(255,255,255,.6)}
+html[data-time="night"] .msg.bot,html[data-time="night"] .ask input,html[data-time="night"] .mic{background:rgba(255,255,255,.07)}
+@media (max-width:860px){.engine.glass{position:relative}}
+
+/* ===== signal sweep transition ===== */
+.sweep{position:fixed;inset:0;z-index:40;pointer-events:none;overflow:hidden;visibility:hidden}
+.sweep.on{visibility:visible}
+.sw{position:absolute;left:0;top:-100vh;width:100%;height:300vh;transform:translateY(116vh);will-change:transform;clip-path:url(#swClip)}
+.sw svg{position:absolute;inset:0;width:100%;height:100%}
+.sw-a{background:linear-gradient(115deg,rgba(255,255,255,.34),rgba(255,255,255,.1) 40%,rgba(255,255,255,.26));-webkit-backdrop-filter:blur(14px) saturate(190%) brightness(1.12);backdrop-filter:blur(14px) saturate(190%) brightness(1.12)}
+.sw-b{background:linear-gradient(100deg,color-mix(in srgb,var(--signal) 78%,transparent),color-mix(in srgb,var(--signal) 45%,transparent) 45%,color-mix(in srgb,var(--ai-lamp) 60%,transparent));-webkit-backdrop-filter:blur(22px) saturate(160%);backdrop-filter:blur(22px) saturate(160%)}
+.sw-c{background:radial-gradient(90% 40% at 20% 36%,rgba(255,255,255,.1),transparent 70%),linear-gradient(160deg,rgba(34,34,40,.86),rgba(12,12,14,.93));-webkit-backdrop-filter:blur(34px) saturate(140%);backdrop-filter:blur(34px) saturate(140%)}
+.sw-read{position:absolute;inset:0;display:grid;place-content:center;justify-items:center;gap:10px;color:#F4F3EE;opacity:0;text-align:center;padding:0 24px}
+.sw-k{font-size:.8rem;letter-spacing:.16em;color:#A3A39D;display:flex;align-items:center;gap:10px}
+.sw-k i{width:8px;height:8px;border-radius:50%;background:var(--ai-lamp);box-shadow:0 0 12px var(--ai-lamp)}
+.sw-read b{font-family:var(--display);font-weight:600;font-size:clamp(1.8rem,5vw,3.6rem);letter-spacing:-.04em;line-height:1.05;max-width:18ch}
+.sw-read svg{width:min(520px,70vw);height:44px;overflow:hidden}
+.sw-wave{fill:none;stroke:var(--signal);stroke-width:2;animation:flow2 1.1s linear infinite}
+@keyframes flow2{to{transform:translateX(-400px)}}
+main.leaving{transition:transform .5s cubic-bezier(.6,0,.3,1),filter .5s;transform:scale(.975);filter:saturate(.7)}
+
+/* ===== story visuals ===== */
+.vizbox{border-radius:10px;overflow:hidden;margin:0 0 16px;aspect-ratio:16/9;background:#151517;box-shadow:inset 0 0 0 1px rgba(255,255,255,.08)}
+.viz{display:block;width:100%;height:100%}
+.pcard .vizbox{aspect-ratio:16/8;margin:-6px -6px 8px;border-radius:9px}
+.detail .vizbox{margin:22px 0 4px;border-radius:14px;max-height:420px}
+.vz-draw{stroke-dasharray:1;stroke-dashoffset:0}
+.vz-needle{transform-box:view-box;transform-origin:200px 132px}
+.vz-tick{transform-box:view-box;transform-origin:200px 86px}
+.vz-grow{transform-box:fill-box;transform-origin:bottom}
+:is(.detail,.card:hover,.card:focus-visible,.pcard:hover,.pcard:focus-visible) .vz-draw{animation:vzdraw 3.6s ease-out infinite}
+:is(.detail,.card:hover,.card:focus-visible,.pcard:hover,.pcard:focus-visible) .vz-pop{animation:vzpop 3.6s ease-out infinite both}
+:is(.detail,.card:hover,.card:focus-visible,.pcard:hover,.pcard:focus-visible) .vz-grow{animation:vzgrow 1.5s ease-in-out infinite alternate both}
+:is(.detail,.card:hover,.card:focus-visible,.pcard:hover,.pcard:focus-visible) .vz-needle{animation:vzneedle 3.8s cubic-bezier(.3,.9,.3,1) infinite}
+:is(.detail,.card:hover,.card:focus-visible,.pcard:hover,.pcard:focus-visible) .vz-tick{animation:vztick 3.4s ease-in-out infinite}
+@keyframes vzdraw{0%{stroke-dashoffset:1;opacity:1}50%,88%{stroke-dashoffset:0;opacity:1}100%{stroke-dashoffset:0;opacity:0}}
+@keyframes vzpop{0%{opacity:.1}10%,84%{opacity:1}100%{opacity:.1}}
+@keyframes vzgrow{from{transform:scaleY(.2)}to{transform:scaleY(1)}}
+@keyframes vzneedle{0%{transform:rotate(var(--a))}40%{transform:rotate(5deg)}50%{transform:rotate(-3deg)}60%,92%{transform:rotate(0)}100%{transform:rotate(var(--a))}}
+@keyframes vztick{0%,25%{transform:rotate(-30deg)}50%,85%{transform:rotate(0)}100%{transform:rotate(-30deg)}}
+.card .vizbox,.pcard .vizbox{transition:box-shadow .25s}
+.card:hover .vizbox,.pcard:hover .vizbox{box-shadow:inset 0 0 0 1px rgba(255,255,255,.08),0 0 0 2px color-mix(in srgb,var(--ai-lamp) 55%,transparent)}
+@media (prefers-reduced-motion:reduce){.viz *{animation:none!important}}
+
+
+/* ===== follower Orbit ===== */
+#orbit.float{position:fixed;left:0;top:0;height:auto;max-height:none;z-index:15;transform-origin:50% 60%;transition:transform .75s cubic-bezier(.2,.9,.25,1),opacity .3s;filter:drop-shadow(0 16px 16px rgba(0,0,0,.28));opacity:0;pointer-events:none}
+#orbit.float.on{opacity:1;pointer-events:auto}
+#orbit.float.aiming{pointer-events:none}
+#orbit.float #o-root{animation:hover 2.6s ease-in-out infinite}
+#orbit.float.b-giggle #o-root{animation:gig .14s ease-in-out 8 alternate}
+@keyframes hover{0%,100%{transform:translateY(0)}50%{transform:translateY(-9px)}}
+#orbit.float #o-legL{transform:rotate(7deg)}#orbit.float #o-legR{transform:rotate(-7deg)}
+#orbit.float>ellipse{opacity:0}#orbit.float .props{display:none}
+@media (prefers-reduced-motion:reduce){#orbit.float{transition:none}}
+
+/* ===== Orbit keeps busy while he waits ===== */
+.props>g{opacity:0;transition:opacity .35s}
+#orbit.b-type .p-type,#orbit.b-write .p-write,#orbit.b-call .p-call{opacity:1}
+#orbit.b-type #o-armL{animation:tapL .32s ease-in-out infinite alternate}
+#orbit.b-type #o-armR{animation:tapR .32s ease-in-out infinite alternate .16s}
+@keyframes tapL{from{transform:rotate(-17deg)}to{transform:rotate(-24deg)}}
+@keyframes tapR{from{transform:rotate(17deg)}to{transform:rotate(24deg)}}
+#orbit.b-type #o-head{transform:rotate(-7deg) translateY(2px)}
+.p-type .ln{stroke-dasharray:1;stroke-dashoffset:1;animation:typeln 3.2s steps(14) infinite}
+.p-type .ln:nth-of-type(2){animation-delay:.7s}.p-type .ln:nth-of-type(3){animation-delay:1.4s}.p-type .ln:nth-of-type(4){animation-delay:2.1s}
+@keyframes typeln{0%{stroke-dashoffset:1}25%,100%{stroke-dashoffset:0}}
+.p-type .cur{animation:curs .5s steps(1) infinite}@keyframes curs{50%{opacity:0}}
+#orbit.b-write #o-armL{transform:rotate(-14deg)}
+#orbit.b-write #o-armR{animation:scrib .28s ease-in-out infinite alternate}
+@keyframes scrib{from{transform:rotate(36deg)}to{transform:rotate(43deg)}}
+#orbit.b-write #o-head{transform:rotate(-5deg) translateY(4px)}
+.p-write .ln{stroke-dasharray:1;stroke-dashoffset:1;animation:typeln 4s ease-out infinite}
+.p-write .ln:nth-of-type(2){animation-delay:1s}.p-write .ln:nth-of-type(3){animation-delay:2s}
+#orbit.b-call #o-armR{transform:rotate(-152deg)}
+#orbit.b-call #o-head{transform:rotate(7deg)}
+.p-call path{animation:ringp 1.2s ease-out infinite}.p-call path:nth-child(2){animation-delay:.3s}.p-call path:nth-child(3){animation-delay:.6s}
+@keyframes ringp{0%{opacity:0}30%{opacity:1}100%{opacity:0}}
+
+/* bigger hero Orbit, about the height of the chat panel */
+.stage{height:min(79vh,690px)}
+#orbit{max-height:720px}
+#orbit.float{max-height:none}
+@media (max-width:860px){.stage{height:46vh;min-height:300px}}
+
+/* Orbit depth */
+#orbit{filter:drop-shadow(16px 22px 20px rgba(0,0,0,.3)) drop-shadow(0 2px 3px rgba(0,0,0,.2))}
+html[data-time="night"] #orbit{filter:drop-shadow(16px 22px 24px rgba(0,0,0,.6)) drop-shadow(0 0 22px rgba(62,230,210,.12))}
+#orbit.float{filter:drop-shadow(8px 14px 12px rgba(0,0,0,.32))}
+
+/* toast */
+.toast{position:fixed;left:50%;bottom:26px;transform:translate(-50%,20px);z-index:45;padding:12px 18px;border-radius:12px;font-weight:500;font-size:.92rem;opacity:0;pointer-events:none;transition:.35s;max-width:min(92vw,520px);text-align:center;user-select:all}
+.toast.on{opacity:1;transform:translate(-50%,0);pointer-events:auto}
+.toast b{font-weight:600}
 </style>
 </head>
 <body>
-
-<div class="wrap">
-  <header class="top">
-    <a class="mark" href="#">Bernard Francisco</a>
-    <nav aria-label="Sections">
-      <a href="#work">Work</a>
-      <a href="#experience">Experience</a>
-      <a href="#contact">Contact</a>
-    </nav>
-  </header>
-
-  <main>
-  <div class="hero">
-    <div>
-      <h1>Bernard Francisco</h1>
-      <p class="role">Senior Partner Program Manager</p>
-      <p class="intro">I run delivery programs for the partners who implement AI and contact center platforms, from picking the right partner for a deal to confirming the customer is actually live.</p>
-      <div class="actions">
-        <a class="btn primary" href="https://www.linkedin.com/in/bernardfrancisco" rel="noopener">Connect on LinkedIn</a>
-        <a class="btn ghost" href="mailto:hello@bernardfrancisco.com">Email me</a>
-      </div>
-    </div>
-    <figure class="net" aria-labelledby="netcap">
-      <svg viewBox="0 0 400 400" role="img" aria-hidden="true">
-        <g id="spokes"></g>
-        <circle class="hub" cx="200" cy="200" r="58"/>
-        <text class="hubtxt" x="200" y="196" text-anchor="middle">Partner</text>
-        <text class="hubtxt" x="200" y="215" text-anchor="middle">program</text>
-        <g id="nodes"></g>
-      </svg>
-      <figcaption id="netcap">13 implementation partners and 700+ partner-led engagements since 2022</figcaption>
-    </figure>
+<header class="top">
+  <a class="mark" href="#top">Bernard Francisco</a>
+  <nav class="nav" id="nav" aria-label="Sections"><a href="#work">Case studies</a><a href="#partners">Partner stories</a><a href="#about">About</a><a href="#certs">Certifications</a><a href="#engage" data-consult>Work with him</a><a href="#contact">Contact</a></nav>
+  <div class="tools">
+    <button class="chip-btn menu-btn" id="menuBtn" aria-expanded="false" aria-controls="nav">Menu</button>
+    <button class="chip-btn" id="timeBtn" aria-label="Switch lighting. Auto follows your local time." title="Auto matches the lighting to your local time"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg><span id="timeLbl">Auto</span></button>
+    <button class="chip-btn" id="soundBtn" aria-pressed="true" aria-label="Sound on"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M11 5 6 9H2v6h4l5 4z"/><path id="waves" d="M15.5 8.5a5 5 0 0 1 0 7M19 5a10 10 0 0 1 0 14"/></svg><span id="soundLbl">Sound on</span></button>
   </div>
+</header>
 
-  <section aria-labelledby="about-h">
-    <div class="about">
-      <h2 id="about-h">About</h2>
-      <div>
-        <p>I've spent 19 years on the delivery side of customer experience, 15 of them leading people. I started on the phones in 2007, ran contact center operations for US clients, then moved into bringing new client programs live.</p>
-        <p>Since 2022 I've worked at NICE between the platform and the partners who implement it. Partners bid on our deals and I help decide who wins, then I govern what they deliver: scope, risk, change orders, contract alignment and go-live. Lately most of that work is conversational AI on Cognigy.</p>
-        <p>I'm based in Metro Manila and open to remote roles and relocation.</p>
+<main id="top">
+<section class="hero" aria-label="Introduction">
+  <svg class="room" viewBox="0 0 1600 900" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+    <defs>
+      <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" style="stop-color:var(--sky1)"/><stop offset="1" style="stop-color:var(--sky2)"/></linearGradient>
+      <linearGradient id="sweepA" x1="0" y1="0" x2="0" y2="1"><stop offset="0" style="stop-color:var(--curve)"/><stop offset="1" style="stop-color:var(--curve-lo)"/></linearGradient>
+      <linearGradient id="sweepB" x1="0" y1="0" x2="1" y2="1"><stop offset="0" style="stop-color:var(--curve)"/><stop offset="1" style="stop-color:var(--curve-lo)"/></linearGradient>
+      <radialGradient id="glow"><stop offset="0" stop-color="#FFC978" stop-opacity=".5"/><stop offset="1" stop-color="#FFC978" stop-opacity="0"/></radialGradient>
+      <filter id="soft" x="-10%" y="-10%" width="120%" height="140%"><feGaussianBlur stdDeviation="26"/></filter>
+      <pattern id="dots" width="16" height="16" patternUnits="userSpaceOnUse"><circle cx="8" cy="8" r="2.6" style="fill:var(--grille)"/></pattern>
+      <clipPath id="grilleClip"><circle cx="1120" cy="450" r="270"/></clipPath>
+      <clipPath id="dialClip"><circle cx="806" cy="230" r="84"/></clipPath>
+    </defs>
+    <rect width="1600" height="900" style="fill:var(--face)"/>
+    <!-- sweeping shell, upper -->
+    <path d="M0 0H1600V190C1330 60 1090 300 760 250C470 206 250 40 0 210Z" fill="#000" opacity=".16" filter="url(#soft)" transform="translate(0 26)"/>
+    <path d="M0 0H1600V190C1330 60 1090 300 760 250C470 206 250 40 0 210Z" fill="url(#sweepA)"/>
+    <!-- speaker grille -->
+    <circle cx="1120" cy="450" r="286" style="fill:var(--curve)"/>
+    <circle cx="1120" cy="450" r="286" fill="none" style="stroke:var(--rule)" stroke-width="2"/>
+    <g clip-path="url(#grilleClip)" style="opacity:var(--grille-o)"><rect x="840" y="170" width="560" height="560" fill="url(#dots)"/></g>
+    <circle cx="1120" cy="450" r="250" fill="url(#glow)" style="opacity:var(--lamp)"/>
+    <g class="rings"><circle cx="1120" cy="450" r="286" fill="none" style="stroke:var(--ai);animation-delay:-0.0s" stroke-width="2"/><circle cx="1120" cy="450" r="286" fill="none" style="stroke:var(--ai);animation-delay:-1.2s" stroke-width="2"/><circle cx="1120" cy="450" r="286" fill="none" style="stroke:var(--ai);animation-delay:-2.4s" stroke-width="2"/></g>
+    <!-- sky dial: follows the visitor's clock -->
+    <circle cx="806" cy="230" r="104" style="fill:var(--curve)"/>
+    <circle cx="806" cy="230" r="97" fill="none" style="stroke:var(--ink-soft)" stroke-width="6" stroke-dasharray="2 23.4" opacity=".7"/>
+    <g clip-path="url(#dialClip)"><rect x="722" y="146" width="168" height="168" fill="url(#sky)"/>
+      <g id="sunArm" style="transform-origin:806px 262px;transition:transform 1.2s ease"><circle cx="806" cy="196" r="15" fill="#FFE2A0" style="opacity:var(--sun)"/><circle cx="806" cy="196" r="11" fill="#F1F1F8" style="opacity:calc(1 - var(--sun))"/></g>
+      <path d="M722 276Q806 256 890 276V320H722Z" style="fill:var(--city)"/>
+    </g>
+    <circle cx="806" cy="230" r="84" fill="none" style="stroke:var(--rule)" stroke-width="2"/>
+    <!-- channels in orbit -->
+    <g id="orbits"><g transform="rotate(-16 1120 450)"><path d="M720 450a400 128 0 1 0 800 0a400 128 0 1 0 -800 0" fill="none" style="stroke:var(--ink-soft)" stroke-width="1.2" stroke-dasharray="2 7" opacity=".55"/><g><animateMotion dur="38s" begin="-0s" repeatCount="indefinite" path="M720 450a400 128 0 1 0 800 0a400 128 0 1 0 -800 0"/><g transform="rotate(16)"><rect x="-36" y="-13" width="72" height="26" rx="13" style="fill:var(--curve);stroke:var(--rule)"/><circle cx="-23" cy="0" r="4" fill="var(--signal)"/><text x="-13" y="4.5" class="tok">voice</text></g></g><g><animateMotion dur="38s" begin="-19s" repeatCount="indefinite" path="M720 450a400 128 0 1 0 800 0a400 128 0 1 0 -800 0"/><g transform="rotate(16)"><rect x="-36" y="-13" width="72" height="26" rx="13" style="fill:var(--curve);stroke:var(--rule)"/><circle cx="-23" cy="0" r="4" fill="var(--ai)"/><text x="-13" y="4.5" class="tok">email</text></g></g></g><g transform="rotate(14 1120 450)"><path d="M650 450a470 170 0 1 0 940 0a470 170 0 1 0 -940 0" fill="none" style="stroke:var(--ink-soft)" stroke-width="1.2" stroke-dasharray="2 7" opacity=".55"/><g><animateMotion dur="52s" begin="-8s" repeatCount="indefinite" path="M650 450a470 170 0 1 0 940 0a470 170 0 1 0 -940 0"/><g transform="rotate(-14)"><rect x="-32" y="-13" width="64" height="26" rx="13" style="fill:var(--curve);stroke:var(--rule)"/><circle cx="-19" cy="0" r="4" fill="var(--ai)"/><text x="-9" y="4.5" class="tok">chat</text></g></g><g><animateMotion dur="52s" begin="-34s" repeatCount="indefinite" path="M650 450a470 170 0 1 0 940 0a470 170 0 1 0 -940 0"/><g transform="rotate(-14)"><rect x="-29" y="-13" width="58" height="26" rx="13" style="fill:var(--curve);stroke:var(--rule)"/><circle cx="-16" cy="0" r="4" fill="var(--signal)"/><text x="-6" y="4.5" class="tok">sms</text></g></g></g><g transform="rotate(38 1120 450)"><path d="M780 450a340 96 0 1 0 680 0a340 96 0 1 0 -680 0" fill="none" style="stroke:var(--ink-soft)" stroke-width="1.2" stroke-dasharray="2 7" opacity=".55"/><g><animateMotion dur="44s" begin="-5s" repeatCount="indefinite" path="M780 450a340 96 0 1 0 680 0a340 96 0 1 0 -680 0" keyPoints="1;0" keyTimes="0;1" calcMode="linear"/><g transform="rotate(-38)"><rect x="-46" y="-13" width="92" height="26" rx="13" style="fill:var(--curve);stroke:var(--rule)"/><circle cx="-33" cy="0" r="4" fill="var(--ai)"/><text x="-23" y="4.5" class="tok">ai agent</text></g></g></g></g>
+    <!-- sweeping shell, lower: a display band with a live voice waveform -->
+    <g transform="translate(0 58)">
+    <clipPath id="bandClip"><path d="M0 770C380 660 1040 760 1600 610V900H0Z"/></clipPath>
+    <path d="M0 770C380 660 1040 760 1600 610V900H0Z" fill="#000" opacity=".2" filter="url(#soft)" transform="translate(0 -18)"/>
+    <path d="M0 770C380 660 1040 760 1600 610V900H0Z" style="fill:var(--band)"/>
+    <g clip-path="url(#bandClip)"><g transform="translate(0 -22)"><g class="wavebox">
+      <path class="wave w3" d="M0 822.1L8 822.5L16 822.0L24 820.8L32 819.5L40 818.5L48 818.0L56 818.3L64 819.2L72 820.5L80 821.8L88 822.6L96 822.6L104 821.4L112 819.0L120 815.4L128 811.0L136 806.3L144 801.9L152 798.2L160 795.8L168 794.9L176 795.5L184 797.4L192 800.2L200 803.4L208 806.6L216 809.2L224 811.1L232 812.0L240 812.2L248 812.0L256 811.6L264 811.6L272 812.3L280 813.9L288 816.3L296 819.4L304 822.7L312 825.7L320 828.0L328 829.1L336 828.7L344 826.8L352 823.6L360 819.4L368 814.7L376 810.2L384 806.3L392 803.5L400 801.9L408 801.5L416 802.0L424 803.2L432 804.5L440 805.5L448 806.0L456 805.7L464 804.8L472 803.5L480 802.2L488 801.4L496 801.4L504 802.6L512 805.0L520 808.6L528 813.0L536 817.7L544 822.1L552 825.8L560 828.2L568 829.1L576 828.5L584 826.6L592 823.8L600 820.6L608 817.4L616 814.8L624 812.9L632 812.0L640 811.8L648 812.0L656 812.4L664 812.4L672 811.7L680 810.1L688 807.7L696 804.6L704 801.3L712 798.3L720 796.0L728 794.9L736 795.3L744 797.2L752 800.4L760 804.6L768 809.3L776 813.8L784 817.7L792 820.5L800 822.1L808 822.5L816 822.0L824 820.8L832 819.5L840 818.5L848 818.0L856 818.3L864 819.2L872 820.5L880 821.8L888 822.6L896 822.6L904 821.4L912 819.0L920 815.4L928 811.0L936 806.3L944 801.9L952 798.2L960 795.8L968 794.9L976 795.5L984 797.4L992 800.2L1000 803.4L1008 806.6L1016 809.2L1024 811.1L1032 812.0L1040 812.2L1048 812.0L1056 811.6L1064 811.6L1072 812.3L1080 813.9L1088 816.3L1096 819.4L1104 822.7L1112 825.7L1120 828.0L1128 829.1L1136 828.7L1144 826.8L1152 823.6L1160 819.4L1168 814.7L1176 810.2L1184 806.3L1192 803.5L1200 801.9L1208 801.5L1216 802.0L1224 803.2L1232 804.5L1240 805.5L1248 806.0L1256 805.7L1264 804.8L1272 803.5L1280 802.2L1288 801.4L1296 801.4L1304 802.6L1312 805.0L1320 808.6L1328 813.0L1336 817.7L1344 822.1L1352 825.8L1360 828.2L1368 829.1L1376 828.5L1384 826.6L1392 823.8L1400 820.6L1408 817.4L1416 814.8L1424 812.9L1432 812.0L1440 811.8L1448 812.0L1456 812.4L1464 812.4L1472 811.7L1480 810.1L1488 807.7L1496 804.6L1504 801.3L1512 798.3L1520 796.0L1528 794.9L1536 795.3L1544 797.2L1552 800.4L1560 804.6L1568 809.3L1576 813.8L1584 817.7L1592 820.5L1600 822.1L1608 822.5L1616 822.0L1624 820.8L1632 819.5L1640 818.5L1648 818.0L1656 818.3L1664 819.2L1672 820.5L1680 821.8L1688 822.6L1696 822.6L1704 821.4L1712 819.0L1720 815.4L1728 811.0L1736 806.3L1744 801.9L1752 798.2L1760 795.8L1768 794.9L1776 795.5L1784 797.4L1792 800.2L1800 803.4L1808 806.6L1816 809.2L1824 811.1L1832 812.0L1840 812.2L1848 812.0L1856 811.6L1864 811.6L1872 812.3L1880 813.9L1888 816.3L1896 819.4L1904 822.7L1912 825.7L1920 828.0L1928 829.1L1936 828.7L1944 826.8L1952 823.6L1960 819.4L1968 814.7L1976 810.2L1984 806.3L1992 803.5L2000 801.9L2008 801.5L2016 802.0L2024 803.2L2032 804.5L2040 805.5L2048 806.0L2056 805.7L2064 804.8L2072 803.5L2080 802.2L2088 801.4L2096 801.4L2104 802.6L2112 805.0L2120 808.6L2128 813.0L2136 817.7L2144 822.1L2152 825.8L2160 828.2L2168 829.1L2176 828.5L2184 826.6L2192 823.8L2200 820.6L2208 817.4L2216 814.8L2224 812.9L2232 812.0L2240 811.8L2248 812.0L2256 812.4L2264 812.4L2272 811.7L2280 810.1L2288 807.7L2296 804.6L2304 801.3L2312 798.3L2320 796.0L2328 794.9L2336 795.3L2344 797.2L2352 800.4L2360 804.6L2368 809.3L2376 813.8L2384 817.7L2392 820.5L2400 822.1L2408 822.5L2416 822.0L2424 820.8L2432 819.5L2440 818.5L2448 818.0L2456 818.3L2464 819.2L2472 820.5L2480 821.8L2488 822.6L2496 822.6L2504 821.4L2512 819.0L2520 815.4L2528 811.0L2536 806.3L2544 801.9L2552 798.2L2560 795.8L2568 794.9L2576 795.5L2584 797.4L2592 800.2L2600 803.4L2608 806.6L2616 809.2L2624 811.1L2632 812.0L2640 812.2L2648 812.0L2656 811.6L2664 811.6L2672 812.3L2680 813.9L2688 816.3L2696 819.4L2704 822.7L2712 825.7L2720 828.0L2728 829.1L2736 828.7L2744 826.8L2752 823.6L2760 819.4L2768 814.7L2776 810.2L2784 806.3L2792 803.5L2800 801.9L2808 801.5L2816 802.0L2824 803.2L2832 804.5L2840 805.5L2848 806.0L2856 805.7L2864 804.8L2872 803.5L2880 802.2L2888 801.4L2896 801.4L2904 802.6L2912 805.0L2920 808.6L2928 813.0L2936 817.7L2944 822.1L2952 825.8L2960 828.2L2968 829.1L2976 828.5L2984 826.6L2992 823.8L3000 820.6L3008 817.4L3016 814.8L3024 812.9L3032 812.0L3040 811.8L3048 812.0L3056 812.4L3064 812.4L3072 811.7L3080 810.1L3088 807.7L3096 804.6L3104 801.3L3112 798.3L3120 796.0L3128 794.9L3136 795.3L3144 797.2L3152 800.4L3160 804.6L3168 809.3L3176 813.8L3184 817.7L3192 820.5L3200 822.1" fill="none" stroke="#FFFFFF" stroke-opacity=".28" stroke-width="1.5"/>
+      <path class="wave w2" d="M0 846.8L8 852.1L16 855.5L24 856.5L32 855.5L40 853.2L48 850.4L56 847.8L64 845.8L72 844.1L80 842.0L88 839.1L96 835.0L104 829.8L112 824.3L120 819.4L128 816.2L136 815.2L144 816.6L152 819.6L160 823.3L168 826.3L176 827.8L184 827.5L192 825.6L200 822.8L208 820.0L216 817.9L224 816.9L232 816.6L240 816.4L248 815.8L256 814.3L264 812.1L272 809.8L280 808.4L288 808.8L296 811.6L304 816.8L312 823.6L320 831.0L328 837.7L336 842.7L344 845.6L352 846.5L360 846.3L368 845.8L376 845.6L384 845.9L392 846.5L400 846.8L408 846.2L416 844.2L424 841.0L432 837.2L440 834.0L448 832.1L456 832.3L464 834.5L472 838.1L480 842.0L488 845.1L496 846.3L504 845.4L512 842.5L520 838.6L528 834.4L536 830.7L544 827.9L552 825.6L560 823.3L568 820.4L576 816.6L584 812.0L592 807.3L600 803.6L608 801.7L616 802.4L624 805.6L632 810.7L640 816.4L648 821.7L656 825.6L664 827.6L672 828.0L680 827.6L688 827.0L696 827.1L704 828.0L712 829.6L720 831.0L728 831.8L736 831.4L744 830.0L752 828.3L760 827.1L768 827.5L776 830.0L784 834.6L792 840.6L800 846.8L808 852.1L816 855.5L824 856.5L832 855.5L840 853.2L848 850.4L856 847.8L864 845.8L872 844.1L880 842.0L888 839.1L896 835.0L904 829.8L912 824.3L920 819.4L928 816.2L936 815.2L944 816.6L952 819.6L960 823.3L968 826.3L976 827.8L984 827.5L992 825.6L1000 822.8L1008 820.0L1016 817.9L1024 816.9L1032 816.6L1040 816.4L1048 815.8L1056 814.3L1064 812.1L1072 809.8L1080 808.4L1088 808.8L1096 811.6L1104 816.8L1112 823.6L1120 831.0L1128 837.7L1136 842.7L1144 845.6L1152 846.5L1160 846.3L1168 845.8L1176 845.6L1184 845.9L1192 846.5L1200 846.8L1208 846.2L1216 844.2L1224 841.0L1232 837.2L1240 834.0L1248 832.1L1256 832.3L1264 834.5L1272 838.1L1280 842.0L1288 845.1L1296 846.3L1304 845.4L1312 842.5L1320 838.6L1328 834.4L1336 830.7L1344 827.9L1352 825.6L1360 823.3L1368 820.4L1376 816.6L1384 812.0L1392 807.3L1400 803.6L1408 801.7L1416 802.4L1424 805.6L1432 810.7L1440 816.4L1448 821.7L1456 825.6L1464 827.6L1472 828.0L1480 827.6L1488 827.0L1496 827.1L1504 828.0L1512 829.6L1520 831.0L1528 831.8L1536 831.4L1544 830.0L1552 828.3L1560 827.1L1568 827.5L1576 830.0L1584 834.6L1592 840.6L1600 846.8L1608 852.1L1616 855.5L1624 856.5L1632 855.5L1640 853.2L1648 850.4L1656 847.8L1664 845.8L1672 844.1L1680 842.0L1688 839.1L1696 835.0L1704 829.8L1712 824.3L1720 819.4L1728 816.2L1736 815.2L1744 816.6L1752 819.6L1760 823.3L1768 826.3L1776 827.8L1784 827.5L1792 825.6L1800 822.8L1808 820.0L1816 817.9L1824 816.9L1832 816.6L1840 816.4L1848 815.8L1856 814.3L1864 812.1L1872 809.8L1880 808.4L1888 808.8L1896 811.6L1904 816.8L1912 823.6L1920 831.0L1928 837.7L1936 842.7L1944 845.6L1952 846.5L1960 846.3L1968 845.8L1976 845.6L1984 845.9L1992 846.5L2000 846.8L2008 846.2L2016 844.2L2024 841.0L2032 837.2L2040 834.0L2048 832.1L2056 832.3L2064 834.5L2072 838.1L2080 842.0L2088 845.1L2096 846.3L2104 845.4L2112 842.5L2120 838.6L2128 834.4L2136 830.7L2144 827.9L2152 825.6L2160 823.3L2168 820.4L2176 816.6L2184 812.0L2192 807.3L2200 803.6L2208 801.7L2216 802.4L2224 805.6L2232 810.7L2240 816.4L2248 821.7L2256 825.6L2264 827.6L2272 828.0L2280 827.6L2288 827.0L2296 827.1L2304 828.0L2312 829.6L2320 831.0L2328 831.8L2336 831.4L2344 830.0L2352 828.3L2360 827.1L2368 827.5L2376 830.0L2384 834.6L2392 840.6L2400 846.8L2408 852.1L2416 855.5L2424 856.5L2432 855.5L2440 853.2L2448 850.4L2456 847.8L2464 845.8L2472 844.1L2480 842.0L2488 839.1L2496 835.0L2504 829.8L2512 824.3L2520 819.4L2528 816.2L2536 815.2L2544 816.6L2552 819.6L2560 823.3L2568 826.3L2576 827.8L2584 827.5L2592 825.6L2600 822.8L2608 820.0L2616 817.9L2624 816.9L2632 816.6L2640 816.4L2648 815.8L2656 814.3L2664 812.1L2672 809.8L2680 808.4L2688 808.8L2696 811.6L2704 816.8L2712 823.6L2720 831.0L2728 837.7L2736 842.7L2744 845.6L2752 846.5L2760 846.3L2768 845.8L2776 845.6L2784 845.9L2792 846.5L2800 846.8L2808 846.2L2816 844.2L2824 841.0L2832 837.2L2840 834.0L2848 832.1L2856 832.3L2864 834.5L2872 838.1L2880 842.0L2888 845.1L2896 846.3L2904 845.4L2912 842.5L2920 838.6L2928 834.4L2936 830.7L2944 827.9L2952 825.6L2960 823.3L2968 820.4L2976 816.6L2984 812.0L2992 807.3L3000 803.6L3008 801.7L3016 802.4L3024 805.6L3032 810.7L3040 816.4L3048 821.7L3056 825.6L3064 827.6L3072 828.0L3080 827.6L3088 827.0L3096 827.1L3104 828.0L3112 829.6L3120 831.0L3128 831.8L3136 831.4L3144 830.0L3152 828.3L3160 827.1L3168 827.5L3176 830.0L3184 834.6L3192 840.6L3200 846.8" fill="none" style="stroke:var(--ai-lamp)" stroke-width="2"/>
+      <path class="wave w1" d="M0 835.3L8 835.8L16 834.6L24 832.6L32 830.4L40 828.8L48 828.3L56 828.9L64 830.3L72 832.0L80 833.4L88 833.9L96 833.1L104 831.2L112 828.7L120 826.1L128 824.3L136 824.0L144 825.7L152 829.5L160 834.9L168 841.2L176 847.4L184 852.6L192 856.0L200 857.3L208 856.3L216 853.7L224 850.1L232 846.2L240 843.0L248 840.7L256 839.4L264 839.0L272 838.8L280 838.3L288 836.8L296 834.1L304 830.3L312 825.7L320 821.2L328 817.5L336 815.3L344 815.2L352 817.1L360 820.8L368 825.3L376 829.9L384 833.5L392 835.5L400 835.3L408 833.0L416 829.1L424 824.3L432 819.5L440 815.2L448 812.1L456 810.2L464 809.1L472 808.5L480 807.5L488 805.8L496 803.0L504 799.2L512 794.7L520 790.5L528 787.1L536 785.5L544 785.9L552 788.6L560 793.0L568 798.6L576 804.2L584 809.0L592 812.1L600 813.3L608 812.4L616 810.0L624 806.8L632 803.6L640 801.1L648 799.8L656 799.6L664 800.4L672 801.7L680 802.7L688 802.9L696 802.0L704 800.1L712 797.7L720 795.3L728 793.9L736 794.1L744 796.5L752 800.9L760 807.2L768 814.4L776 821.7L784 828.0L792 832.7L800 835.3L808 835.8L816 834.6L824 832.6L832 830.4L840 828.8L848 828.3L856 828.9L864 830.3L872 832.0L880 833.4L888 833.9L896 833.1L904 831.2L912 828.7L920 826.1L928 824.3L936 824.0L944 825.7L952 829.5L960 834.9L968 841.2L976 847.4L984 852.6L992 856.0L1000 857.3L1008 856.3L1016 853.7L1024 850.1L1032 846.2L1040 843.0L1048 840.7L1056 839.4L1064 839.0L1072 838.8L1080 838.3L1088 836.8L1096 834.1L1104 830.3L1112 825.7L1120 821.2L1128 817.5L1136 815.3L1144 815.2L1152 817.1L1160 820.8L1168 825.3L1176 829.9L1184 833.5L1192 835.5L1200 835.3L1208 833.0L1216 829.1L1224 824.3L1232 819.5L1240 815.2L1248 812.1L1256 810.2L1264 809.1L1272 808.5L1280 807.5L1288 805.8L1296 803.0L1304 799.2L1312 794.7L1320 790.5L1328 787.1L1336 785.5L1344 785.9L1352 788.6L1360 793.0L1368 798.6L1376 804.2L1384 809.0L1392 812.1L1400 813.3L1408 812.4L1416 810.0L1424 806.8L1432 803.6L1440 801.1L1448 799.8L1456 799.6L1464 800.4L1472 801.7L1480 802.7L1488 802.9L1496 802.0L1504 800.1L1512 797.7L1520 795.3L1528 793.9L1536 794.1L1544 796.5L1552 800.9L1560 807.2L1568 814.4L1576 821.7L1584 828.0L1592 832.7L1600 835.3L1608 835.8L1616 834.6L1624 832.6L1632 830.4L1640 828.8L1648 828.3L1656 828.9L1664 830.3L1672 832.0L1680 833.4L1688 833.9L1696 833.1L1704 831.2L1712 828.7L1720 826.1L1728 824.3L1736 824.0L1744 825.7L1752 829.5L1760 834.9L1768 841.2L1776 847.4L1784 852.6L1792 856.0L1800 857.3L1808 856.3L1816 853.7L1824 850.1L1832 846.2L1840 843.0L1848 840.7L1856 839.4L1864 839.0L1872 838.8L1880 838.3L1888 836.8L1896 834.1L1904 830.3L1912 825.7L1920 821.2L1928 817.5L1936 815.3L1944 815.2L1952 817.1L1960 820.8L1968 825.3L1976 829.9L1984 833.5L1992 835.5L2000 835.3L2008 833.0L2016 829.1L2024 824.3L2032 819.5L2040 815.2L2048 812.1L2056 810.2L2064 809.1L2072 808.5L2080 807.5L2088 805.8L2096 803.0L2104 799.2L2112 794.7L2120 790.5L2128 787.1L2136 785.5L2144 785.9L2152 788.6L2160 793.0L2168 798.6L2176 804.2L2184 809.0L2192 812.1L2200 813.3L2208 812.4L2216 810.0L2224 806.8L2232 803.6L2240 801.1L2248 799.8L2256 799.6L2264 800.4L2272 801.7L2280 802.7L2288 802.9L2296 802.0L2304 800.1L2312 797.7L2320 795.3L2328 793.9L2336 794.1L2344 796.5L2352 800.9L2360 807.2L2368 814.4L2376 821.7L2384 828.0L2392 832.7L2400 835.3L2408 835.8L2416 834.6L2424 832.6L2432 830.4L2440 828.8L2448 828.3L2456 828.9L2464 830.3L2472 832.0L2480 833.4L2488 833.9L2496 833.1L2504 831.2L2512 828.7L2520 826.1L2528 824.3L2536 824.0L2544 825.7L2552 829.5L2560 834.9L2568 841.2L2576 847.4L2584 852.6L2592 856.0L2600 857.3L2608 856.3L2616 853.7L2624 850.1L2632 846.2L2640 843.0L2648 840.7L2656 839.4L2664 839.0L2672 838.8L2680 838.3L2688 836.8L2696 834.1L2704 830.3L2712 825.7L2720 821.2L2728 817.5L2736 815.3L2744 815.2L2752 817.1L2760 820.8L2768 825.3L2776 829.9L2784 833.5L2792 835.5L2800 835.3L2808 833.0L2816 829.1L2824 824.3L2832 819.5L2840 815.2L2848 812.1L2856 810.2L2864 809.1L2872 808.5L2880 807.5L2888 805.8L2896 803.0L2904 799.2L2912 794.7L2920 790.5L2928 787.1L2936 785.5L2944 785.9L2952 788.6L2960 793.0L2968 798.6L2976 804.2L2984 809.0L2992 812.1L3000 813.3L3008 812.4L3016 810.0L3024 806.8L3032 803.6L3040 801.1L3048 799.8L3056 799.6L3064 800.4L3072 801.7L3080 802.7L3088 802.9L3096 802.0L3104 800.1L3112 797.7L3120 795.3L3128 793.9L3136 794.1L3144 796.5L3152 800.9L3160 807.2L3168 814.4L3176 821.7L3184 828.0L3192 832.7L3200 835.3" fill="none" style="stroke:var(--signal)" stroke-width="2.5"/>
+    </g></g></g>
+    <path d="M0 770C380 660 1040 760 1600 610" fill="none" style="stroke:var(--signal)" stroke-width="3"/>
+    </g>
+    <circle cx="1470" cy="126" r="7" style="fill:var(--signal)"/>
+  </svg>
+
+  <div class="hero-inner">
+    <div class="glass panel" id="panel">
+      <div id="intro">
+        <p class="kicker">Hi, I'm Orbit. I work for</p>
+        <h1>Bernard Francisco</h1>
+        <p class="role">Senior Partner Program Manager</p>
+        <p class="pitch">He makes partner-led AI delivery work, from picking the partner to confirming the customer is live.</p>
+        <p class="ivr-q" id="ivrq">To get you to the right story, what brings you here?</p>
+        <div class="ivr" role="group" aria-labelledby="ivrq">
+          <button data-p="hiring"><span class="key">1</span>I'm hiring for a role</button>
+          <button data-p="partner"><span class="key">2</span>I'm a partner or vendor</button>
+          <button data-p="consult" data-consult><span class="key">3</span>I need a consultant for a project</button>
+          <button data-p="look"><span class="key">4</span>Just looking around</button>
+        </div>
+      </div>
+      <div class="chat" id="chat" aria-label="Chat with Bernard's AI assistant">
+        <div class="log" id="log" aria-live="polite"></div>
+        <div class="suggest" id="suggest"></div>
+        <form class="ask" id="ask">
+          <label class="sr" for="q">Ask a question</label>
+          <input id="q" maxlength="600" autocomplete="off" placeholder="What has he done with AI?">
+          <button type="button" class="round mic" id="mic" aria-label="Speak your question"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="3" width="6" height="11" rx="3"/><path d="M5 11a7 7 0 0 0 14 0M12 18v3"/></svg></button>
+          <button class="round send" aria-label="Send"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+        </form>
+        <p class="disc">You're chatting with an AI assistant. Answers come from Bernard's approved career notes and may be imperfect.</p>
+        <button class="wrapbtn" id="wrapBtn">Wrap up the chat</button>
       </div>
     </div>
-  </section>
 
-  <section id="work" aria-labelledby="work-h">
-    <h2 id="work-h">Selected work</h2>
-    <p class="lede">Customer and partner names are left out on purpose. I'm happy to walk through any of these in a conversation.</p>
+    <div class="stage">
+      <aside class="glass engine" id="engine" aria-label="What the AI is doing">
+        <h2>engine</h2>
+        <svg class="gauge" viewBox="0 0 200 112" aria-hidden="true">
+          <path d="M22 100A78 78 0 0 1 178 100" fill="none" style="stroke:var(--rule)" stroke-width="10"/>
+          <path d="M22 100A78 78 0 0 1 178 100" fill="none" style="stroke:var(--ink-soft)" stroke-width="10" stroke-dasharray="1.5 22.9"/>
+          <path d="M146 37A78 78 0 0 1 178 100" fill="none" style="stroke:var(--ai)" stroke-width="3" transform="translate(0 -9)" opacity=".9"/>
+          <line id="needle" x1="100" y1="100" x2="100" y2="34" style="stroke:var(--signal)" stroke-width="3" stroke-linecap="round"/>
+          <circle cx="100" cy="100" r="7" style="fill:var(--ink)"/>
+          <text x="22" y="111" class="gl">0</text><text x="170" y="111" class="gl">100</text>
+        </svg>
+        <div class="step" id="s1">listening <b id="v1">waiting</b></div>
+        <div class="step" id="s2">intent <b id="v2">-</b></div>
+        <div class="step" id="s3">confidence <b id="v3">-</b></div>
+        <div class="step" id="s4">route <b id="v4">-</b></div>
+      </aside>
 
-    <article class="case">
-      <div class="when"><strong>NICE</strong>2025 to 2026</div>
-      <div>
-        <h3>Building an AI delivery bench across a partner network</h3>
-        <p>When NICE brought Cognigy conversational AI to its partners, almost none of them had certified engineers to deliver it. I pushed every partner in my portfolio into the certification track and reported progress partner by partner each month, so gaps were visible before they turned into stalled projects.</p>
-        <div class="result"><b>Result:</b> certified Cognigy Associates went from 1 to 70 and Practitioners from 0 to 6. Partner-led Cognigy engagements grew from 6 in 2025 to 33 in 2026.</div>
-      </div>
-    </article>
-
-    <article class="case">
-      <div class="when"><strong>NICE</strong>2025 to 2026</div>
-      <div>
-        <h3>Picking the right partner for each AI deal</h3>
-        <p>I sit on the buy side of partner bids. Each Cognigy deal was shopped to three or four partners, and I weighed their pricing, level of effort, scope and delivery timeline before a contract was awarded. That gives me a clear view of what wins a partner bid and what makes one fall apart after signing.</p>
-      </div>
-    </article>
-
-    <article class="case">
-      <div class="when"><strong>NICE</strong>2025 to 2026</div>
-      <div>
-        <h3>A support model that kept partner projects moving</h3>
-        <p>Partner engineers kept hitting technical blockers with no clear way into NICE's product and support teams. I set up a support model that routed each blocker to the right expert, which removed the waiting that was holding up partner-led AI implementations.</p>
-        <p>I also set a go-live evidence standard (signed BRD, customer sign-off and a go-live confirmation) and audited a partner's full case history against it.</p>
-      </div>
-    </article>
-
-    <article class="case">
-      <div class="when"><strong>Sitel Group</strong>2020 to 2022</div>
-      <div>
-        <h3>Bringing new client programs live</h3>
-        <p>I led about 10 new client programs from signed contract to steady state, the largest at more than 700 seats. For each one I wrote the scope and charter against the SOW and MSA, sized the effort with resource managers, and owned the forecast, KPIs and risk plan.</p>
-        <div class="result"><b>Result:</b> promoted from Transitions Manager to Senior Transition Manager after 10 months.</div>
-      </div>
-    </article>
-  </section>
-
-  <section id="experience" aria-labelledby="exp-h">
-    <h2 id="exp-h">Experience</h2>
-    <p class="lede">Nineteen years, from the contact center floor to partner programs.</p>
-    <ol class="timeline" reversed>
-      <li class="now"><span class="co">NICE</span><span class="yr">2022 to 2026</span><span class="ti">Senior Partner Program Manager, previously Partner Program Manager</span></li>
-      <li><span class="co">Sitel Group (now Foundever)</span><span class="yr">2020 to 2022</span><span class="ti">Senior Transition Manager</span></li>
-      <li><span class="co">IBEX</span><span class="yr">2019 to 2020</span><span class="ti">Operations Manager</span></li>
-      <li><span class="co">Alorica</span><span class="yr">2016 to 2019</span><span class="ti">Operations Manager, joined as Team Manager</span></li>
-      <li><span class="co">Sutherland</span><span class="yr">2014 to 2016</span><span class="ti">Team Manager</span></li>
-      <li><span class="co">Convergys</span><span class="yr">2008 to 2014</span><span class="ti">Team Leader</span></li>
-      <li><span class="co">TELUS International</span><span class="yr">2007 to 2008</span><span class="ti">Customer Service Associate</span></li>
-    </ol>
-  </section>
-
-  <section aria-labelledby="cert-h">
-    <h2 id="cert-h">Certifications</h2>
-    <p class="lede">Platform certifications I hold myself, plus the ones I'm working on.</p>
-    <ul class="certs">
-      <li><span class="n">NICE Certified AI Engineer, Cognigy Associate</span><span class="d">NICE, 2026</span></li>
-      <li><span class="n">NICE Certified Implementation Engineer, CXone Mpower ACD/IVR</span><span class="d">NICE, 2025</span></li>
-      <li><span class="n">Lean Six Sigma Yellow Belt</span><span class="d">Whitehall Bradford Management Consulting, 2017</span></li>
-      <li><span class="n">Project Management Professional (PMP)</span><span class="d">Project Management Institute, in progress</span></li>
-    </ul>
-  </section>
-  </main>
-</div>
-
-<section class="contact" id="contact" aria-labelledby="contact-h">
-  <div class="wrap">
-    <h2 id="contact-h">Looking for someone to run your partner delivery?</h2>
-    <p>I'm open to partner program, partner success and delivery leadership roles. The fastest way to reach me is LinkedIn or email.</p>
-    <div class="actions">
-      <a class="btn primary" href="https://www.linkedin.com/in/bernardfrancisco" rel="noopener">Connect on LinkedIn</a>
-      <a class="btn ghost" href="mailto:hello@bernardfrancisco.com">hello@bernardfrancisco.com</a>
+      <svg id="orbit" class="b-idle f-eyes" viewBox="0 0 200 360" role="button" tabindex="0" aria-label="Orbit the robot. Click to tickle, click three times to make him dance.">
+        <defs><linearGradient id="shell" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#E9E9E6"/><stop offset=".2" stop-color="#FFFFFF"/><stop offset=".6" stop-color="#FCFCFA"/><stop offset=".86" stop-color="#E6E6E2"/><stop offset="1" stop-color="#C9C9C4"/></linearGradient><radialGradient id="headG" cx=".34" cy=".22" r=".95"><stop offset="0" stop-color="#FFFFFF"/><stop offset=".55" stop-color="#FCFCFA"/><stop offset=".85" stop-color="#E7E7E3"/><stop offset="1" stop-color="#C8C8C3"/></radialGradient><linearGradient id="aoV" x1="0" y1="0" x2="0" y2="1"><stop offset=".55" stop-color="#000" stop-opacity="0"/><stop offset="1" stop-color="#000" stop-opacity=".1"/></linearGradient><linearGradient id="gloss" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#fff" stop-opacity=".34"/><stop offset=".45" stop-color="#fff" stop-opacity=".04"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></linearGradient><radialGradient id="lampG"><stop offset=".3" stop-color="#F2541B" stop-opacity=".55"/><stop offset="1" stop-color="#F2541B" stop-opacity="0"/></radialGradient><radialGradient id="joint" cx=".32" cy=".28" r=".9"><stop offset="0" stop-color="#7A7A80"/><stop offset=".45" stop-color="#38383C"/><stop offset="1" stop-color="#0E0E10"/></radialGradient><linearGradient id="visor" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#2A2B31"/><stop offset="1" stop-color="#0C0C0E"/></linearGradient><radialGradient id="gshadow"><stop offset="0" stop-color="#000" stop-opacity=".28"/><stop offset="1" stop-color="#000" stop-opacity="0"/></radialGradient></defs><ellipse cx="100" cy="350" rx="64" ry="10" fill="url(#gshadow)"/>
+        <g id="o-root" class="pv">
+          <g id="o-legL" class="pv">
+            <rect x="74" y="232" width="20" height="54" rx="10" fill="url(#shell)" stroke="#BDBDB6" stroke-width=".8"/>
+            <circle cx="84" cy="290" r="10" fill="url(#joint)"/>
+            <rect x="74" y="292" width="20" height="40" rx="10" fill="url(#shell)" stroke="#BDBDB6" stroke-width=".8"/>
+            <path d="M66 344Q66 328 84 328Q104 328 106 344Z" fill="url(#shell)" stroke="#BDBDB6" stroke-width=".8"/>
+            <path d="M66 344H106" stroke="#2A2A2D" stroke-width="3"/>
+          </g>
+          <g id="o-legR" class="pv">
+            <rect x="106" y="232" width="20" height="54" rx="10" fill="url(#shell)" stroke="#BDBDB6" stroke-width=".8"/>
+            <circle cx="116" cy="290" r="10" fill="url(#joint)"/>
+            <rect x="106" y="292" width="20" height="40" rx="10" fill="url(#shell)" stroke="#BDBDB6" stroke-width=".8"/>
+            <path d="M94 344Q96 328 116 328Q134 328 134 344Z" fill="url(#shell)" stroke="#BDBDB6" stroke-width=".8"/>
+            <path d="M94 344H134" stroke="#2A2A2D" stroke-width="3"/>
+          </g>
+          <g id="o-torso">
+            <path d="M68 130Q100 120 132 130L128 214Q100 226 72 214Z" fill="url(#shell)" stroke="#BDBDB6" stroke-width=".8"/><path d="M68 130Q100 120 132 130L128 214Q100 226 72 214Z" fill="url(#aoV)"/><ellipse cx="100" cy="131" rx="30" ry="7" fill="#000" opacity=".16"/><circle cx="100" cy="158" r="18" fill="url(#lampG)"/>
+            <path d="M78 214Q100 222 122 214L118 236Q100 244 82 236Z" fill="url(#joint)"/>
+            <circle cx="100" cy="158" r="9" fill="#F2541B" id="chestlight"/>
+            <path d="M100 153v5M96.5 155a5 5 0 1 0 7 0" stroke="#FFFFFF" stroke-width="1.8" fill="none" stroke-linecap="round"/>
+          </g>
+          <g class="props">
+            <g class="p-type"><rect x="-64" y="92" width="96" height="68" rx="8" fill="#151517" stroke="#3EE6D2" stroke-opacity=".7" stroke-width="1.2"/><path class="ln" pathLength="1" d="M-54 108H14" stroke="#3EE6D2" stroke-width="3" stroke-linecap="round"/><path class="ln" pathLength="1" d="M-54 120H-4" stroke="#F4F3EE" stroke-opacity=".7" stroke-width="3" stroke-linecap="round"/><path class="ln" pathLength="1" d="M-54 132H20" stroke="#F4F3EE" stroke-opacity=".7" stroke-width="3" stroke-linecap="round"/><path class="ln" pathLength="1" d="M-54 144H-18" stroke="#F2541B" stroke-width="3" stroke-linecap="round"/><rect class="cur" x="-12" y="140" width="5" height="8" fill="#F4F3EE"/>
+              <rect x="52" y="224" width="96" height="20" rx="6" fill="#232327" stroke="#4A4A50"/><g fill="#6E6E74"><rect x="58" y="228" width="7" height="4" rx="1"/><rect x="67" y="228" width="7" height="4" rx="1"/><rect x="76" y="228" width="7" height="4" rx="1"/><rect x="85" y="228" width="7" height="4" rx="1"/><rect x="94" y="228" width="7" height="4" rx="1"/><rect x="103" y="228" width="7" height="4" rx="1"/><rect x="112" y="228" width="7" height="4" rx="1"/><rect x="121" y="228" width="7" height="4" rx="1"/><rect x="130" y="228" width="7" height="4" rx="1"/><rect x="139" y="228" width="7" height="4" rx="1"/><rect x="58" y="235" width="7" height="4" rx="1"/><rect x="67" y="235" width="7" height="4" rx="1"/><rect x="76" y="235" width="7" height="4" rx="1"/><rect x="85" y="235" width="7" height="4" rx="1"/><rect x="94" y="235" width="7" height="4" rx="1"/><rect x="103" y="235" width="7" height="4" rx="1"/><rect x="112" y="235" width="7" height="4" rx="1"/><rect x="121" y="235" width="7" height="4" rx="1"/><rect x="130" y="235" width="7" height="4" rx="1"/><rect x="139" y="235" width="7" height="4" rx="1"/></g></g>
+            <g class="p-write" transform="rotate(-8 76 220)"><rect x="50" y="192" width="52" height="60" rx="5" fill="#F4F3EE" stroke="#BDBDB6"/><rect x="66" y="188" width="20" height="8" rx="3" fill="#4A4A50"/><path class="ln" pathLength="1" d="M58 208H94" stroke="#1C1C1E" stroke-width="2.4" stroke-linecap="round"/><path class="ln" pathLength="1" d="M58 220H88" stroke="#1C1C1E" stroke-width="2.4" stroke-linecap="round"/><path class="ln" pathLength="1" d="M58 232H92" stroke="#F2541B" stroke-width="2.4" stroke-linecap="round"/></g>
+            <g class="p-call" fill="none" stroke="#3EE6D2" stroke-width="2.5" stroke-linecap="round"><path d="M172 62a14 14 0 0 1 0 22"/><path d="M180 54a24 24 0 0 1 0 38"/><path d="M188 46a34 34 0 0 1 0 54"/></g>
+          </g>
+          <g id="o-armL" class="pv">
+            <circle cx="62" cy="140" r="10" fill="url(#joint)"/>
+            <rect x="52" y="142" width="18" height="46" rx="9" fill="url(#shell)" stroke="#BDBDB6" stroke-width=".8"/>
+            <circle cx="61" cy="192" r="8" fill="url(#joint)"/>
+            <rect x="52" y="194" width="18" height="38" rx="9" fill="url(#shell)" stroke="#BDBDB6" stroke-width=".8"/>
+            <circle cx="61" cy="238" r="10" fill="url(#shell)" stroke="#BDBDB6" stroke-width=".8"/>
+          </g>
+          <g id="o-armR" class="pv">
+            <circle cx="138" cy="140" r="10" fill="url(#joint)"/>
+            <rect x="130" y="142" width="18" height="46" rx="9" fill="url(#shell)" stroke="#BDBDB6" stroke-width=".8"/>
+            <circle cx="139" cy="192" r="8" fill="url(#joint)"/>
+            <rect x="130" y="194" width="18" height="38" rx="9" fill="url(#shell)" stroke="#BDBDB6" stroke-width=".8"/>
+            <circle cx="139" cy="238" r="10" fill="url(#shell)" stroke="#BDBDB6" stroke-width=".8"/>
+          </g>
+          <rect x="92" y="112" width="16" height="14" rx="4" fill="url(#joint)"/>
+          <g id="o-head" class="pv">
+            <path d="M48 72Q48 36 100 36Q152 36 152 72V90Q152 118 100 118Q48 118 48 90Z" fill="url(#headG)" stroke="#A9A9A2" stroke-width=".8"/><path d="M48 72Q48 36 100 36Q152 36 152 72V90Q152 118 100 118Q48 118 48 90Z" fill="url(#aoV)"/><path d="M60 58Q70 42 100 40Q118 40 130 46" stroke="#fff" stroke-width="3" stroke-linecap="round" fill="none" opacity=".9"/>
+            <path d="M58 74Q58 56 100 56Q142 56 142 74V88Q142 106 100 106Q58 106 58 88Z" fill="url(#visor)"/><path d="M58 74Q58 56 100 56Q142 56 142 74V88Q142 106 100 106Q58 106 58 88Z" fill="url(#gloss)"/><path d="M60 90Q62 104 100 105Q138 104 140 90" stroke="#3EE6D2" stroke-opacity=".25" stroke-width="1.5" fill="none"/>
+            <path id="visorGlow" d="M58 74Q58 56 100 56Q142 56 142 74V88Q142 106 100 106Q58 106 58 88Z" fill="#3EE6D2" opacity=".08"/>
+            <path d="M66 66Q76 60 94 60" stroke="#FFFFFF" stroke-opacity=".22" stroke-width="2" fill="none" stroke-linecap="round"/>
+            <g class="face" transform="translate(100 81) scale(.82) translate(-100 -79)">
+              <g class="fe"><g id="o-eyes"><ellipse cx="84" cy="78" rx="7" ry="9" fill="#3EE6D2"/><ellipse cx="116" cy="78" rx="7" ry="9" fill="#3EE6D2"/></g><path d="M90 94Q100 100 110 94" stroke="#3EE6D2" stroke-width="3" fill="none" stroke-linecap="round"/></g>
+              <g class="fh"><path d="M76 80Q84 68 92 80M108 80Q116 68 124 80" stroke="#3EE6D2" stroke-width="4" fill="none" stroke-linecap="round"/><path d="M86 92Q100 104 114 92" stroke="#3EE6D2" stroke-width="3.5" fill="none" stroke-linecap="round"/></g>
+              <g class="ft"><circle cx="100" cy="70" r="5" fill="#3EE6D2"/><circle cx="114" cy="84" r="5" fill="#3EE6D2" opacity=".7"/><circle cx="86" cy="84" r="5" fill="#3EE6D2" opacity=".4"/></g>
+              <g class="fs"><rect x="76" y="68" width="6" height="22" rx="3" fill="#3EE6D2"/><rect x="88" y="64" width="6" height="30" rx="3" fill="#3EE6D2"/><rect x="100" y="66" width="6" height="26" rx="3" fill="#3EE6D2"/><rect x="112" y="64" width="6" height="30" rx="3" fill="#3EE6D2"/><rect x="124" y="70" width="6" height="18" rx="3" fill="#3EE6D2"/></g>
+              <g class="fw"><path d="M76 80Q84 70 92 80" stroke="#3EE6D2" stroke-width="4" fill="none" stroke-linecap="round"/><ellipse cx="116" cy="78" rx="7" ry="9" fill="#3EE6D2"/><path d="M88 94Q100 102 112 94" stroke="#3EE6D2" stroke-width="3" fill="none" stroke-linecap="round"/></g>
+              <g class="fwow"><circle cx="84" cy="76" r="9" fill="none" stroke="#3EE6D2" stroke-width="4"/><circle cx="116" cy="76" r="9" fill="none" stroke="#3EE6D2" stroke-width="4"/><circle cx="100" cy="96" r="5" fill="#3EE6D2"/></g>
+              <g class="fz"><path d="M76 80H92M108 80H124" stroke="#3EE6D2" stroke-width="4" stroke-linecap="round"/></g>
+            </g>
+            <rect x="43" y="70" width="6" height="22" rx="3" fill="url(#joint)"/>
+            <rect x="151" y="70" width="6" height="22" rx="3" fill="url(#joint)"/>
+          </g>
+        </g>
+      </svg>
     </div>
   </div>
 </section>
-<footer><div class="wrap">Bernard Francisco, Metro Manila</div></footer>
+
+<section class="blk" id="work" aria-labelledby="work-h">
+  <div class="wrap">
+    <h2 class="big" id="work-h">Case studies</h2>
+    <p class="lede">The full story behind each result. Partner and customer names are left out on purpose.</p>
+    <div class="cards" id="caseCards"></div>
+  </div>
+</section>
+
+<section class="blk" id="partners" aria-labelledby="partners-h" style="padding-top:0">
+  <div class="wrap">
+    <h2 class="big" id="partners-h">The partner stories</h2>
+    <p class="lede">Thirteen implementation partners over four years at NICE, described by type, not by name. Nine get a full story and four smaller ones share the last card.</p>
+    <div class="pgrid" id="partnerCards"></div>
+  </div>
+</section>
+
+<section class="blk" id="about" aria-labelledby="about-h" style="padding-top:0">
+  <div class="wrap about">
+    <div class="port"><img src="data:image/jpeg;base64,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" alt="Bernard Francisco"><span class="badge" aria-hidden="true"><i></i></span></div>
+    <div>
+      <h2 class="big" id="about-h">About Bernard</h2>
+      <p>Nineteen years on the delivery side of customer experience, fifteen of them leading people. He started on the phones in 2007, ran contact center operations for US clients, then moved into bringing new client programs live.</p>
+      <p>Since 2022 he has worked between the platform and the partners who implement it: deciding which partner wins a deal, then governing scope, risk, change orders and go-live. Most of that work is now conversational AI.</p>
+      <p>Based in Metro Manila. Open to remote roles and relocation.</p>
+    </div>
+  </div>
+</section>
+
+<section class="blk" aria-labelledby="exp-h" style="padding-top:0">
+  <div class="wrap">
+    <h2 class="big" id="exp-h">Experience</h2>
+    <ol class="tl" reversed>
+      <li><span class="y">2022 to 2026</span><div><b>NICE</b><br><span>Senior Partner Program Manager, joined as Partner Program Manager</span></div></li>
+      <li><span class="y">2020 to 2022</span><div><b>Sitel Group (now Foundever)</b><br><span>Senior Transition Manager</span></div></li>
+      <li><span class="y">2016 to 2020</span><div><b>IBEX, Alorica</b><br><span>Operations Manager</span></div></li>
+      <li><span class="y">2007 to 2016</span><div><b>Sutherland, Convergys, TELUS International</b><br><span>Team Manager, Team Leader, Customer Service Associate</span></div></li>
+    </ol>
+  </div>
+</section>
+
+<section class="blk" id="certs" aria-labelledby="cert-h" style="padding-top:0">
+  <div class="wrap">
+    <h2 class="big" id="cert-h">Certifications</h2>
+    <div class="certs" id="certList"></div>
+    </div>
+</section>
+
+<section class="blk" id="engage" aria-labelledby="engage-h" style="padding-top:0" data-consult>
+  <div class="wrap">
+    <h2 class="big" id="engage-h">Two ways to work with Bernard</h2>
+    <p class="lede">Hire him into a role, or bring him in for a defined piece of work.</p>
+    <div class="lanes">
+      <div class="lane">
+        <h3>Full-time role</h3>
+        <p>Partner program, partner success or AI delivery leadership. Remote, or relocation with sponsorship.</p>
+        <a class="lane-cta" href="mailto:hello@bernardfrancisco.com?subject=Role%20for%20Bernard" data-snd="ding">Talk about a role</a>
+      </div>
+      <div class="lane">
+        <h3>Consulting engagement</h3>
+        <ul>
+          <li><b>Partner program setup or audit.</b> Cadence, scorecards, go-live evidence and invoicing rules that both sides can work from.</li>
+          <li><b>AI delivery readiness.</b> Getting a partner or delivery team certified and able to deliver conversational AI projects.</li>
+          <li><b>Go-live and escalation recovery.</b> An outside owner for an implementation that has stalled across teams.</li>
+          <li><b>New program transitions.</b> Contact center launches from signed contract to steady state.</li>
+        </ul>
+        <a class="lane-cta" href="mailto:hello@bernardfrancisco.com?subject=Consulting%20project" data-snd="ding">Describe your project</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contact" aria-labelledby="contact-h">
+  <div class="wrap">
+    <h2 class="big" id="contact-h">Need someone to run your partner delivery?</h2>
+    <p>Bernard is open to partner program, partner success and AI delivery roles.</p>
+    <div class="cta">
+      <a class="pri" href="mailto:hello@bernardfrancisco.com" data-snd="ding">hello@bernardfrancisco.com</a>
+      <a href="https://www.linkedin.com/in/bernardfrancisco" rel="noopener" data-snd="ding">Connect on LinkedIn</a>
+    </div>
+  </div>
+</section>
+</main>
+
+<div class="sweep" id="sweep" aria-hidden="true">
+  <svg width="0" height="0" style="position:absolute"><defs>
+    <clipPath id="swClip" clipPathUnits="objectBoundingBox"><path d="M0 .3667C.25 .3067 .65 .36 1 .28V.6667C.65 .7467 .25 .6933 0 .7533Z"/></clipPath>
+    <linearGradient id="swRim" x1="0" x2="1"><stop offset="0" stop-color="#fff" stop-opacity=".15"/><stop offset=".35" stop-color="#fff" stop-opacity=".95"/><stop offset=".7" stop-color="#fff" stop-opacity=".35"/><stop offset="1" stop-color="#fff" stop-opacity=".8"/></linearGradient>
+    <linearGradient id="swGlow" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fff" stop-opacity=".28"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></linearGradient>
+  </defs></svg>
+  <div class="sw sw-a"><svg viewBox="0 0 100 300" preserveAspectRatio="none"><path d="M0 110C25 92 65 108 100 84" fill="none" stroke="url(#swRim)" stroke-width="2.5" vector-effect="non-scaling-stroke"/><path d="M0 226C25 208 65 224 100 200" fill="none" stroke="url(#swRim)" stroke-width="2" vector-effect="non-scaling-stroke" opacity=".6"/><path d="M0 110C25 92 65 108 100 84V104C65 128 25 112 0 130Z" fill="url(#swGlow)"/></svg></div>
+  <div class="sw sw-b"><svg viewBox="0 0 100 300" preserveAspectRatio="none"><path d="M0 110C25 92 65 108 100 84" fill="none" stroke="url(#swRim)" stroke-width="2.5" vector-effect="non-scaling-stroke"/><path d="M0 226C25 208 65 224 100 200" fill="none" stroke="url(#swRim)" stroke-width="2" vector-effect="non-scaling-stroke" opacity=".6"/><path d="M0 110C25 92 65 108 100 84V104C65 128 25 112 0 130Z" fill="url(#swGlow)"/></svg></div>
+  <div class="sw sw-c"><svg viewBox="0 0 100 300" preserveAspectRatio="none"><path d="M0 110C25 92 65 108 100 84" fill="none" stroke="url(#swRim)" stroke-width="2.5" vector-effect="non-scaling-stroke"/><path d="M0 226C25 208 65 224 100 200" fill="none" stroke="url(#swRim)" stroke-width="2" vector-effect="non-scaling-stroke" opacity=".6"/><path d="M0 110C25 92 65 108 100 84V104C65 128 25 112 0 130Z" fill="url(#swGlow)"/></svg></div>
+  <div class="sw-read" id="swRead"><span class="sw-k"><i></i>routing to</span><b id="swName"></b>
+    <svg viewBox="0 0 800 60" preserveAspectRatio="none"><path class="sw-wave" d="M0 36.7L8 41.8L16 45.3L24 46.4L32 45.3L40 42.6L48 39.3L56 36.5L64 35.1L72 35.2L80 36.6L88 38.4L96 39.8L104 40.3L112 39.9L120 39.0L128 38.3L136 38.5L144 39.9L152 42.3L160 45.0L168 46.8L176 46.9L184 44.7L192 40.3L200 34.3L208 27.9L216 22.3L224 18.1L232 15.8L240 15.0L248 15.0L256 15.0L264 14.5L272 13.5L280 12.4L288 11.9L296 12.7L304 15.1L312 19.0L320 23.4L328 27.4L336 30.0L344 30.5L352 29.0L360 26.1L368 22.9L376 20.6L384 19.8L392 20.8L400 23.3L408 26.4L416 29.3L424 31.5L432 32.9L440 33.9L448 35.2L456 37.4L464 40.9L472 45.4L480 50.0L488 53.8L496 55.8L504 55.2L512 52.3L520 47.6L528 42.3L536 37.6L544 34.1L552 32.2L560 31.5L568 31.4L576 31.0L584 29.8L592 27.9L600 25.7L608 23.9L616 23.2L624 23.9L632 26.0L640 28.5L648 30.5L656 31.0L664 29.4L672 25.9L680 21.0L688 15.9L696 11.8L704 9.3L712 8.8L720 10.0L728 11.9L736 14.0L744 15.6L752 16.6L760 17.4L768 18.9L776 21.5L784 25.6L792 31.0L800 36.7L808 41.8L816 45.3L824 46.4L832 45.3L840 42.6L848 39.3L856 36.5L864 35.1L872 35.2L880 36.6L888 38.4L896 39.8L904 40.3L912 39.9L920 39.0L928 38.3L936 38.5L944 39.9L952 42.3L960 45.0L968 46.8L976 46.9L984 44.7L992 40.3L1000 34.3L1008 27.9L1016 22.3L1024 18.1L1032 15.8L1040 15.0L1048 15.0L1056 15.0L1064 14.5L1072 13.5L1080 12.4L1088 11.9L1096 12.7L1104 15.1L1112 19.0L1120 23.4L1128 27.4L1136 30.0L1144 30.5L1152 29.0L1160 26.1L1168 22.9L1176 20.6L1184 19.8L1192 20.8L1200 23.3L1208 26.4L1216 29.3L1224 31.5L1232 32.9L1240 33.9L1248 35.2L1256 37.4L1264 40.9L1272 45.4L1280 50.0L1288 53.8L1296 55.8L1304 55.2L1312 52.3L1320 47.6L1328 42.3L1336 37.6L1344 34.1L1352 32.2L1360 31.5L1368 31.4L1376 31.0L1384 29.8L1392 27.9L1400 25.7L1408 23.9L1416 23.2L1424 23.9L1432 26.0L1440 28.5L1448 30.5L1456 31.0L1464 29.4L1472 25.9L1480 21.0L1488 15.9L1496 11.8L1504 9.3L1512 8.8L1520 10.0L1528 11.9L1536 14.0L1544 15.6L1552 16.6L1560 17.4L1568 18.9L1576 21.5L1584 25.6L1592 31.0L1600 36.7"/></svg></div>
+</div>
+<div class="toast glass" id="toast" role="status" aria-live="polite"></div>
+<div class="detail" id="detail" role="dialog" aria-modal="true" aria-label="Story details"><div class="dwrap" id="dbody"></div></div>
+
+<div class="sum" id="sum" role="dialog" aria-modal="true" aria-labelledby="sum-h">
+  <div class="glass">
+    <h2 class="big" id="sum-h" style="font-size:1.4rem">Chat summary</h2>
+    <div class="ticket" id="ticket"></div>
+    <div class="cta" style="color:var(--ink)">
+      <a class="pri" href="mailto:hello@bernardfrancisco.com">Email Bernard</a>
+      <a href="https://www.linkedin.com/in/bernardfrancisco" rel="noopener">LinkedIn</a>
+    </div>
+    <button class="chip-btn" id="closeSum" style="margin-top:16px">Back to the site</button>
+  </div>
+</div>
 
 <script>
+const STORIES=[
+{id:"portfolio",title:"A top-three partner portfolio",where:"NICE, 2025",tags:["Commercial","Portfolio"],
+ metrics:[["$6.75M","partner contracts signed"],["#3","of all partner portfolios"],["~$887K","in quarter-critical programs landed"]],
+ situation:"In 2025 Bernard's main portfolio was three implementation partners. The two largest global partners in the program had far bigger benches.",
+ did:["Ran a weekly cadence with each partner, built around their own report, with written minutes after every meeting.","Required every deal forecast for the quarter to be live or to have a formal availability case, so forecasts stopped drifting.","Personally drove five quarter-critical programs to go-live or stabilization: a multi-module go-live despite technical limits, a production stabilization, a post-go-live recovery, a phased activation, and a 60-seat deployment."],
+ result:"His portfolio ranked third of all partner portfolios for contracts signed, about $6.75M, roughly 22% of total value and 24% of all partner contracts. Only the two largest global partners were ahead. The five programs he drove were worth about $887K together.",
+ shows:"Delivery discipline that shows up in commercial results."},
+{id:"ai",title:"Building an AI delivery bench across a partner network",where:"NICE, 2025 to 2026",tags:["Conversational AI","Enablement"],
+ metrics:[["1 to 70","certified Associates"],["0 to 6","certified Practitioners"],["6 to 33","partner AI engagements"]],
+ situation:"When NICE added Cognigy conversational AI to what it sells, the implementation partners in Bernard's portfolio had to be able to deliver it. At the start, one person across those partners was certified.",
+ did:["Pushed every partner to put engineers into the certification track, and tracked progress per person and per product.","Chased the grading side too, asking for committed review dates so candidates weren't left waiting.","Built a monthly certification report for each partner, so gaps showed up before they turned into stalled projects.","Set up a support path so a partner stuck on an AI build reached the right expert through one case and one owner."],
+ result:"Certified Associates across his partners went from 1 to 70 and Practitioners from 0 to 6. Partner-led Cognigy engagements grew from 6 in 2025 to 33 in 2026.",
+ shows:"He builds capability in teams that don't report to him, and measures it so it keeps moving."},
+{id:"pick",title:"Picking the right partner for each AI deal",where:"NICE, 2025 to 2026",tags:["Partner selection","Commercial"],
+ metrics:[["3 to 4","partners bidding per deal"]],
+ situation:"Partners bid for NICE deals. On conversational AI work, each deal was typically shopped to three or four partners before a contract was awarded, and Bernard sat on the buy side.",
+ did:["Reviewed each proposal on level of effort, hours, price, scope and delivery timeline.","Compared bids side by side and approved on the whole picture, not price alone.","Pushed back where scope was vague or the timeline didn't match the effort."],
+ result:"Work went to partners on a clear basis, and delivery started with scope and dates both sides had agreed. It also gave him a close view of what wins a partner bid and what makes one fall apart after signing.",
+ shows:"Commercial judgment on the buy side of partner deals."},
+{id:"approval",title:"Two days to an approval",where:"NICE, 2026",tags:["Conversational AI","Unblocking"],
+ metrics:[["2 days","request to approval"],["5 days","to model loaded and tested"]],
+ situation:"A customer already frustrated by a slow start, with a senior executive on the kickoff, expected their AI agent built within weeks. The partner's build stopped because the language model behind the agent hadn't been provisioned, and provisioning needed a commercial approval that only the sales team could request.",
+ did:["Answered the partner's case, then wrote the account team one message they could act on in a single read: where things stood, why approval was needed, the exact ask, and what to tell the customer.","Confirmed every technical prerequisite in parallel, so the approval would be the only wait.","When approval came, sent the provisioning team everything they needed in one message.","Twelve minutes later caught a second dependency, a supporting model with its own approval, raised it with a fallback option, and kept the main work from waiting on it."],
+ result:"Approval came two days after his request, and the model was loaded and tested five days after he first asked. The second model followed once he confirmed a smaller option with the implementer.",
+ shows:"He writes asks a busy person can act on in one read, and looks for the next blocker while the first is being cleared."},
+{id:"golive",title:"A go-live blocker across four teams",where:"NICE, 2026",tags:["Go-live","Escalation"],
+ metrics:[["74","phone numbers unblocked"],["Same day","to a path to go-live"]],
+ situation:"A partner was two days from go-live. 74 outbound phone numbers needed a carrier verification step, and a product change had removed the usual way to register them. Four internal teams each held a piece, the two usual owners were out, and it reached Bernard at night.",
+ did:["Wrote one message to the owning teams with the full history, what had already changed, and three precise questions.","Added the detail that made it a real blocker: the caller ID list agents pick from is fed by that verification list, so the customer couldn't select the numbers at all.","When pointed to a standard process, checked the cases where it had already been tried and showed none had worked."],
+ result:"Same day, the carrier team confirmed verification was already in effect and a workaround for caller ID selection was found. The partner validated it and took it to the customer as the path to go-live.",
+ shows:"He resolves urgent problems he doesn't own by making the problem impossible to misread."},
+{id:"evidence",title:"No documents, no invoice",where:"NICE, 2024 onward",tags:["Governance","Partner payments"],
+ metrics:[["1 case","per contract, fixed document list"]],
+ situation:"Partners invoiced NICE for completed implementations, but go-live cases often had no proof the customer had accepted the work, or one case covered several contracts.",
+ did:["Set the rule: one go-live case per contract, with a fixed list of documents (approved requirements, build acceptance, test checklist, go-live acceptance).","Sent it to partner delivery teams in writing and repeated it in weekly reviews.","Held invoices that didn't meet it and told the partner exactly which documents were missing.","Later audited one partner's full case history against the standard."],
+ result:"Invoice approval became a checklist instead of a negotiation.",
+ shows:"He'll hold an unpopular standard when it protects both sides."},
+{id:"dates",title:"Holding a partner to its own dates",where:"NICE, 2026",tags:["Partner governance","Customer escalation"],
+ metrics:[["1 week","to the last open scope item in production"]],
+ situation:"After go-live, a customer escalated. The issues mixed partner build items, known product issues and feature gaps, and the customer couldn't tell who owned what.",
+ did:["Built a case registry and escalation map so every issue had an owner.","Set the rule for customer calls: the partner speaks to what it owns, NICE speaks to product issues.","Sent the partner a numbered list of every commitment past its date, each with the question that would close it.","Named a recurring root cause (the same network port, third case in months) and asked for it to be fixed everywhere.","Asked what the customer had been told about missing capabilities before the next call."],
+ result:"Within a week the last open scope item was in production and a support handoff date was agreed.",
+ shows:"He gets a slipping partner back on track through clarity and influence, without authority over them."},
+{id:"gap",title:"Catching the gap nobody owned",where:"NICE, 2026",tags:["Risk","Judgment"],
+ metrics:[["1 hour","of drift avoided across the contact center"]],
+ situation:"A regional time change was coming for a utility customer. After the date, its contact center would have run an hour off, and it had become an executive escalation.",
+ did:["Found the fixed-offset time setting and confirmed it existed for this case.","Worked out the change would be invisible until the date, so it could go in early with no disruption.","Chose not to apply it himself. Sent the recommendation to the partner to get the customer's approval and check scripts, hours of operation and scheduled reports.","Found the dialer kept its own time zone list that two teams said wasn't theirs, and pushed for a named owner."],
+ result:"An owner confirmed the approach and set up a configuration review with the customer's administrators ahead of the deadline.",
+ shows:"He spots risk others miss, and knows when not to act alone."},
+{id:"contract",title:"Finding the contract behind the ticket",where:"NICE, 2026",tags:["Conversational AI","Commercial"],
+ metrics:[["1 day","from his write-up to a leadership decision"]],
+ situation:"A customer bought conversational AI to try before selling it on. NICE had sold a small block of setup hours, and the customer had a separate consulting contract with a partner. An access request bounced between sales, professional services and the partner for weeks.",
+ did:["When the partner said they were consulting, not implementing, he stopped treating it as an access ticket and asked sales who was actually contracted to do the build.","Named the two pieces of real work involved, and why the access policy tied them to an implementation partner.","When the case came back weeks later, restated the decision in one message, took the partner off the thread, and put the commercial gap in writing: the setup hours covered setup, and end-to-end delivery had to be sold as a package."],
+ result:"Leadership took it to the AI center of excellence within a day. The answer: sales had to sell proper implementation packages. The partner wasn't pushed into uncontracted work, and the access policy was confirmed in writing.",
+ shows:"He looks for the contract behind a ticket, and puts a commercial gap in writing when that's where the fix is."},
+{id:"tracker",title:"One tracker, one meeting",where:"NICE, 2026",tags:["Governance","Partner payments"],
+ metrics:[["7","unpaid invoice lines chased"],["Bi-weekly","operating review set up"]],
+ situation:"A newly assigned partner had open cases, unanswered operational questions and unpaid invoices scattered across email threads. Seven invoice lines had no purchase order or payment status, the oldest past 150 days.",
+ did:["Set up a standing bi-weekly review with a fixed agenda: cases, operational items, invoices and purchase orders, then actions with owners and dates.","Wrote the working rules: either side adds items, every ask states the decision needed, nothing gets deleted.","Took the invoice list to finance with two precise asks and followed up until it moved.","Held the reporting standard, sending back a status in the wrong format and challenging a Green status the partner's own tracker contradicted."],
+ result:"Both companies worked from one list in one meeting, with the partner's senior leader and Bernard's leadership on the invite.",
+ shows:"He builds simple governance both sides can work from, and advocates for the partner inside his own company."},
+{id:"transitions",title:"Bringing new client programs live",where:"Sitel Group, 2020 to 2022",tags:["Transitions","Operations"],
+ metrics:[["~10","client programs taken live"],["700+","seats in the largest"],["10 months","to promotion"]],
+ situation:"As a transitions manager at one of the largest customer experience outsourcers, Bernard took new client programs from signed contract to steady state.",
+ did:["Built scope statements and charters aligned to each SOW and master agreement.","Sized skills, effort and duration with resource managers.","Owned the financial forecast, quality objectives, KPIs and risk and issue plans for each transition.","Worked cross-functionally as a senior operations manager alongside the transitions."],
+ result:"About 10 programs went live, the largest over 700 seats, and he was promoted to Senior Transition Manager within 10 months.",
+ shows:"He can run large, multi-team launches end to end."}
+];
+
+const PARTNERS=[
+{id:"p1",label:"A US contact center integrator",years:"2022 to 2026",headline:"Four years, one weekly rhythm",
+ metrics:[["4 years","longest partner relationship"],["Up to 18","deals in a quarter"],["54 to 71","days to first go-live"],["90 to 100%","customer satisfaction"]],
+ story:"His longest and busiest partner, from his second month at NICE. Their work with him roughly doubled every year to 2025. He ran a weekly meeting built around the partner's own report, with written minutes after each one, and held annual business reviews with their CEO and his VP.",
+ did:["Rolled out a stricter change-order process: no work starts before a signed contract.","Set a case quality bar: every support case comes with logs, screenshots and recordings.","Required every deal forecast for the quarter to be live or have a formal availability case.","Ran an enablement session on a new AI product with a product specialist and shared the recordings."],
+ result:"In 2025 the partner carried $2.2M to $2.7M in deal value per period, peaking near $3.9M, with customer satisfaction between 90 and 100%.",case:"portfolio"},
+{id:"p2",label:"A US CX consultancy",years:"2024 to 2026",headline:"Forecasts you could plan around",
+ metrics:[["94.7%","forecast accuracy, peak"],["40 to 56","days to first go-live"],["~$2.0M","deal value per period"]],
+ story:"One of his three main partners from mid-2024, and his highest-volume partner in 2025. He ran a weekly meeting off their shared project sheet and asked them to keep each project open on it until invoicing was complete, so nothing fell off between go-live and payment.",
+ did:["Ran a joint case and risk register across the customer, the partner and NICE for an embedded agent project.","Cleared training credit and certification access blockers with the education team.","When a large payment arrived with no remittance detail, chased it for 11 days and got the detail to the partner the day after he escalated."],
+ result:"Forecast accuracy reached 94.7% and time to first go-live came in at 40 to 56 days.",case:"portfolio"},
+{id:"p3",label:"A CX technology partner",years:"2025 to 2026",headline:"From scattered cases to a monthly KPI review",
+ metrics:[["~$0.6M","deal value, 2025"],["$54K","paid services from a recovery"],["17","projects reviewed in one session"],["100%","customer satisfaction, peak"]],
+ story:"One of his three main partners in 2025. He ran a weekly meeting with written minutes, 39 sessions that year.",
+ did:["Showed them their support cases were misrouted because of how they were categorized, and moved them to the right request type.","Brought in a second customer contact to unblock a delayed project.","Agreed a monthly KPI review on estimated go-live dates and availability cases, and walked through 17 projects in the first one.","Led a recovery after a rocky go-live that turned into about $54K of paid services."],
+ result:"About 61 days to first go-live, 75% forecast accuracy, and customer satisfaction peaking at 100%.",case:"portfolio"},
+{id:"p4",label:"A large implementation partner",years:"2024 to 2025",headline:"Setting the go-live evidence standard",
+ metrics:[["1 case","per contract"],["Same day","revised contract turned around"]],
+ story:"One of the program's larger partners. Go-live cases often lacked proof the customer had accepted the work.",
+ did:["Introduced the rule of one go-live case per contract, with a fixed list of required documents.","Held invoices that didn't meet it, including declining to accept an implementation without the customer's documented sign-off.","When a customer took a channel out of scope, got the customer's written request, had the contract revised and sent it back the same day.","Called an alignment meeting when the partner considered a project done but the customer found it unusable.","Sent their finance team an open invoice list with an owner on every line."],
+ result:"Invoice approval moved from negotiation to checklist, and the standard became the one he later audited other partners against.",case:"evidence"},
+{id:"p5",label:"A global CX systems integrator",years:"2022 to 2026",headline:"His first partner, and the habits it built",
+ metrics:[["7","Cognigy Associates certified"],["2 days","warning before an out-of-contract go-live"]],
+ story:"His first partner, from his first month at NICE. He took over the weekly call from his manager and sent notes from the very first one.",
+ did:["Pulled their project list and had them fill in missing estimated and actual go-live dates.","Pushed for a quarterly business review and sent them their own KPIs and data to build it from.","Sent back a root-cause document point by point because it proposed almost no action on their side.","Found a messaging build that wasn't in the customer's contract, alerted Sales to raise an addendum, and briefed the partner two days before go-live.","Required written business justification before submitting contract splits for approval."],
+ result:"Clean project data, a real business review, and 7 engineers certified on Cognigy during his time.",case:"ai"},
+{id:"p6",label:"A North American implementation partner",years:"2026",headline:"Building AI capacity fast",
+ metrics:[["4","people through Cognigy e-learning"],["5 days","to unblock voice for their lab"],["19 minutes","to connect a reseller trial"]],
+ story:"A partner he took over early in 2026 while they were building a Cognigy practice.",
+ did:["Restarted a bi-weekly touchbase with a three-item agenda and his VP and directors copied.","When their practice environment couldn't run voice, got it provisioned through the account side, confirmed logins and included speech services. Asked on Oct 9, resolved by Oct 14.","Connected their delivery lead to a reseller's project manager 19 minutes after being asked, so a short trial didn't wait two to four weeks in a queue.","Helped clarify scope before a kickoff when an order listed work the customer hadn't bought.","Held the commercial line on a 50-hour bank of hours: partner work needs its own change request."],
+ result:"Four people completed the e-learning with a plan for the higher certification, and the partner could build and test voice agents.",case:"ai"},
+{id:"p7",label:"A consulting-led AI partner",years:"2025 to 2026",headline:"His busiest Cognigy partner",
+ metrics:[["74","phone numbers unblocked before go-live"],["9 minutes","to brief a project manager late at night"]],
+ story:"Nearly all of his work with this partner came in 2026, when they became his busiest partner for Cognigy AI agent projects.",
+ did:["Cleared a go-live blocker across four internal teams on the day it reached him.","Caught a time zone risk early, recommended the fix, and found an owner for the part nobody owned.","Answered a project manager's late-night question in nine minutes with the contact, escalation path, scope and milestones.","Audited their go-live documentation against the evidence standard.","Chased past due invoices for them inside NICE."],
+ result:"Projects went live on dates the customer could trust, and the partner had one path into NICE when things broke.",case:"golive"},
+{id:"p8",label:"A CX outsourcer building an AI practice",years:"2026",headline:"Onboarding a new partner the right way",
+ metrics:[["2 days","to an AI model approval"],["7","unpaid invoice lines chased"]],
+ story:"Assigned to him in mid-2026 to deliver Cognigy AI agent projects. He onboarded them and set their operating rhythm.",
+ did:["Built a partner onboarding checklist and development playbook.","Set up a bi-weekly operating review with one shared tracker.","Supported their move from end-of-project invoicing to milestone invoicing.","Got an AI build unblocked with a two-day approval.","Got messaging between the two companies working again after they changed domains."],
+ result:"A new partner with a working cadence, cleared invoices and live AI projects within months.",case:"approval"},
+{id:"p9",label:"A global services firm",years:"2025 to 2026",headline:"AI self-service projects to go-live",
+ metrics:[["2","AI self-service projects governed"]],
+ story:"A global services firm that delivered AI self-service projects as a partner in 2025.",
+ did:["Set up the internal kickoff while the statement of work was still being finalized, so no time was lost.","Ran the dependencies call with his VP and set a target go-live date.","After go-live, escalated customer-reported defects and asked the partner for one consolidated view.","Managed milestone payments and change requests on both projects."],
+ result:"Both projects moved through go-live with one owner on the commercial side.",case:"pick"},
+{id:"p10",num:"Partners 10 to 13",label:"Four smaller partnerships",years:"2022 to 2026",headline:"Four more partnerships",
+ metrics:[["13","partners in all"],["4","covered here"]],
+ story:"Four partners he worked with for shorter periods or on a narrower brief. Together with the nine above, they make up the 13 he managed at NICE.",
+ did:["A conversational AI vendor, 2025: kept the commercial side clean, with purchase orders, invoice installments, past due invoices on completed projects and a training statement of work.","A US contact center partner, 2024 to 2025: ran a steady weekly review, tracked go-live status and approved invoices against completed go-lives.","A US CX partner, 2022 to 2023: his first months at NICE, running a weekly project meeting around a large go-live and checking readiness for a European deployment.","An international partner, 2025 and 2026: onboarded them into the partner program and covered them again briefly."],
+ result:"Completed work got paid, go-lives landed, and a new partner came into the program properly.",case:"evidence"}
+];
+const KB_TEXT=`About Bernard Francisco
+- Senior Partner Program Manager at NICE (also called Senior Partner Success Manager), June 2022 to 2026. Joined as Partner Program Manager and was promoted.
+- Based in Metro Manila, Philippines. Open to remote roles and to relocation. Looking for his next partner program, partner success or AI delivery role.
+- 19 years in customer experience, 15 of them leading people. Started as a customer service associate in 2007.
+- Career: TELUS International, Customer Service Associate (2007 to 2008); Convergys, Team Leader (2008 to 2014), where he ran a support pilot program that grew into regular headcount; Sutherland, Team Manager (2014 to 2016); Alorica, Operations Manager (2016 to 2019, joined as Team Manager, promoted in 13 months), leading 5 to 7 team managers; IBEX, Operations Manager (2019 to 2020), leading 7 team leaders and about 120 agents on US accounts; Sitel Group (now Foundever), Senior Transition Manager (2020 to 2022); NICE (2022 to 2026).
+- At NICE he sat between the platform and the implementation partners who deliver it for customers: helping decide which partner wins a deal, then governing scope, risk, change orders, contract alignment and go-live. Most of that work became conversational AI (Cognigy).
+- Managed 13 implementation partners and 700+ partner-led engagements since 2022.
+- 2025: his portfolio ranked third of all partner portfolios for partner contracts signed, about $6.75M (about 22% of total value, 24% of contracts). Drove five quarter-critical programs worth about $887K to go-live or stabilization. Forecast accuracy up to 94.7%. Time to first go-live 40 to 71 days. Customer satisfaction up to 90 to 100%.
+- 2024: rated Successful Performance; handled 454 partner cases and about 225 invoices with none open at year end.
+- Strengths, as his work shows them: partner governance, getting stuck projects moving across many teams, clear written escalations, commercial judgment on partner bids, building partner capability in AI, evidence-based delivery standards, and turning messy partner relationships into one tracker and one cadence.
+- How he works: he writes asks a busy person can act on in one read; he looks for the contract behind a ticket; he checks for the next blocker while the first is being cleared; he holds standards even when they're unpopular; he uses AI daily to pull together partner inputs, logs and context before escalating.
+- Certifications: NICE Certified AI Engineer, Cognigy Associate (2026); NICE Certified Implementation Engineer, CXone Mpower ACD/IVR (2025); Lean Six Sigma Yellow Belt (2017); pursuing PMP (training in progress).
+- Education: studied Political Economy at the Polytechnic University of the Philippines.
+- Consulting: he also takes consulting engagements. Offers: partner program setup or audit (cadence, scorecards, go-live evidence, invoicing rules); AI delivery readiness (getting a partner or delivery team certified and able to deliver conversational AI); go-live and escalation recovery (an outside owner for a stalled implementation); new program transitions (contact center launches from contract to steady state). Rates and terms are discussed directly with Bernard. Link id for this: engage.
+- Contact: hello@bernardfrancisco.com, LinkedIn linkedin.com/in/bernardfrancisco.`;
+
+</script>
+<script>
 (function(){
-  var ns="http://www.w3.org/2000/svg",s=document.getElementById("spokes"),n=document.getElementById("nodes");
-  var count=13,R=160,cx=200,cy=200;
-  for(var i=0;i<count;i++){
-    var a=(-90+i*360/count)*Math.PI/180,x=cx+R*Math.cos(a),y=cy+R*Math.sin(a);
-    var l=document.createElementNS(ns,"line");
-    l.setAttribute("x1",cx+58*Math.cos(a));l.setAttribute("y1",cy+58*Math.sin(a));
-    l.setAttribute("x2",x);l.setAttribute("y2",y);l.setAttribute("class","spoke");
-    l.style.animationDelay=(i*0.07)+"s";s.appendChild(l);
-    var c=document.createElementNS(ns,"circle");
-    c.setAttribute("cx",x);c.setAttribute("cy",y);c.setAttribute("r",13);c.setAttribute("class","node");
-    c.style.animationDelay=(0.5+i*0.07)+"s";n.appendChild(c);
-  }
+const $=s=>document.querySelector(s),$$=s=>[...document.querySelectorAll(s)];
+const root=document.documentElement,orbit=$("#orbit");
+const reduce=matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+/* ---------- time of day ---------- */
+const modes=["auto","day","golden","night"];let tMode=0;
+try{tMode=Math.max(0,modes.indexOf(localStorage.getItem("bf-time")||"auto"))}catch(e){}
+function autoTime(){const h=new Date().getHours();return h>=6&&h<17?"day":h>=17&&h<19?"golden":"night"}
+function applyTime(){const m=modes[tMode];root.dataset.time=m==="auto"?autoTime():m;
+  const hr=m==="auto"?new Date().getHours()+new Date().getMinutes()/60:m==="day"?11:m==="golden"?17.6:22;const prog=root.dataset.time==="night"?((hr+5)%24)/11:(hr-6)/13;const arm=$("#sunArm");if(arm)arm.style.transform="rotate("+(-62+Math.max(0,Math.min(1,prog))*124)+"deg)";
+  $("#timeLbl").textContent=m==="auto"?"Auto ("+root.dataset.time+")":m[0].toUpperCase()+m.slice(1)}
+applyTime();setInterval(()=>{if(modes[tMode]==="auto")applyTime()},60000);
+$("#timeBtn").onclick=()=>{tMode=(tMode+1)%modes.length;try{localStorage.setItem("bf-time",modes[tMode])}catch(e){}applyTime();snd.tick()};
+
+/* ---------- sound ---------- */
+let ctx=null,soundOn=true;try{soundOn=localStorage.getItem("bf-sound")!=="off"}catch(e){}
+function ac(){if(!ctx){const A=window.AudioContext||window.webkitAudioContext;if(!A)return null;ctx=new A()}if(ctx.state==="suspended")ctx.resume();return ctx}
+function tone(f,d,t=0,type="sine",v=.06){if(!soundOn)return;const c=ac();if(!c)return;const o=c.createOscillator(),g=c.createGain();o.type=type;o.frequency.value=f;
+  const s=c.currentTime+t;g.gain.setValueAtTime(0,s);g.gain.linearRampToValueAtTime(v,s+.01);g.gain.exponentialRampToValueAtTime(.0001,s+d);o.connect(g).connect(c.destination);o.start(s);o.stop(s+d+.02)}
+const snd={
+  tick:()=>tone(1400,.05,0,"square",.02),
+  blip:()=>tone(880,.09,0,"triangle"),
+  connect:()=>{tone(660,.14,0,"triangle");tone(990,.2,.12,"triangle")},
+  chord:()=>{tone(523,.4,0);tone(659,.4,.02);tone(784,.45,.04)},
+  ding:()=>{tone(1318,.3,0,"sine",.07);tone(1976,.25,.03,"sine",.03)},
+  plug:()=>tone(220,.06,0,"square",.03),
+  giggle:()=>{[0,1,2,3,4,5].forEach(i=>tone(700+i*90+(i%2)*120,.07,i*.07,"triangle",.05))},
+  jingle:()=>{[523,659,784,1046,784,659,784,1046,1318,1046,784,1046].forEach((f,i)=>tone(f,.16,i*.25,"square",.025))},
+  wow:()=>{tone(400,.25,0,"sine",.05);tone(800,.2,.1,"sine",.04)}
+};
+function setSoundUI(){$("#soundBtn").setAttribute("aria-pressed",soundOn);$("#soundLbl").textContent=soundOn?"Sound on":"Sound off";$("#waves").style.opacity=soundOn?1:.15}
+setSoundUI();
+$("#soundBtn").onclick=()=>{soundOn=!soundOn;try{localStorage.setItem("bf-sound",soundOn?"on":"off")}catch(e){}setSoundUI();if(soundOn)snd.blip()};
+$$("[data-snd]").forEach(a=>a.addEventListener("click",()=>{snd.ding();react("thumbs","wink",1500)}));
+
+/* ---------- Orbit state machine ---------- */
+let busy=false,timer=null,lastAct=Date.now(),floatOn=false;
+function pose(body,face){orbit.setAttribute("class","b-"+body+" f-"+face);root.classList.toggle("speaking",body==="speak");root.classList.toggle("listening",body==="listen"||body==="think");}
+if(reduce){try{document.querySelector(".room").pauseAnimations()}catch(e){}}
+function react(body,face,ms,force){
+  if(busy&&!force)return;clearTimeout(timer);pose(body,face);
+  if(ms){busy=true;timer=setTimeout(()=>{busy=false;pose("idle","eyes")},ms)}
+}
+function hold(body,face){clearTimeout(timer);busy=false;pose(body,face)}
+pose("wave","happy");busy=true;setTimeout(()=>{busy=false;pose("idle","eyes")},2400);
+
+/* eyes follow cursor */
+const eyes=$("#o-eyes"),head=$("#o-head");
+function look(x,y){const r=orbit.getBoundingClientRect();if(!r.width)return;const cx=r.left+r.width/2,cy=r.top+r.height*.22;
+  const dx=Math.max(-1,Math.min(1,(x-cx)/260)),dy=Math.max(-1,Math.min(1,(y-cy)/260));
+  eyes.style.transform="translate("+(dx*7).toFixed(1)+"px,"+(dy*5).toFixed(1)+"px)";
+  if(orbit.classList.contains("b-idle"))head.style.transform="rotate("+(dx*6).toFixed(1)+"deg)";else head.style.transform="";}
+addEventListener("pointermove",e=>{look(e.clientX,e.clientY)},{passive:true});
+
+/* click: tickle, triple: dance, hold: shy */
+let clicks=0,ct=null,holdT=null,held=false;
+orbit.addEventListener("pointerdown",()=>{held=false;holdT=setTimeout(()=>{held=true;react("shy","shy",1800,true);snd.wow()},1200)});
+orbit.addEventListener("pointerup",()=>clearTimeout(holdT));
+orbit.addEventListener("pointerleave",()=>clearTimeout(holdT));
+function poke(){if(held)return;clicks++;clearTimeout(ct);ct=setTimeout(()=>{
+  if(clicks>=3){react("dance","happy",3200,true);snd.jingle();setTimeout(()=>{react("bow","happy",1300,true)},3200)}
+  else{react("giggle","happy",1200,true);snd.giggle()}
+  clicks=0},330)}
+orbit.addEventListener("click",poke);
+orbit.addEventListener("keydown",e=>{if(e.key==="Enter"||e.key===" "){e.preventDefault();poke()}});
+
+/* keep busy while waiting */
+const ACTS=[["type","eyes",7000],["write","think",6500],["call","speak",4500],["type","eyes",6000],["wave","happy",2400]];let actI=0;
+setInterval(()=>{if(busy||thinking||orbit.getAttribute("class").indexOf("b-idle")<0)return;if(Date.now()-lastAct<2500)return;const a=ACTS[actI++%ACTS.length];react(a[0],a[1],a[2])},3000);
+/* bored */
+setInterval(()=>{if(!busy&&Date.now()-lastAct>20000){react("wave","happy",2400);lastAct=Date.now()}},4000);
+
+addEventListener("scroll",()=>$(".top").classList.toggle("scrolled",scrollY>window.innerHeight*.8),{passive:true});
+/* ---------- story visuals: small instrument displays drawn from each story's own numbers ---------- */
+const VZ=(()=>{
+  const O="var(--signal)",T="var(--ai-lamp)",G="#8C8C86",W="#F4F3EE";
+  const txt=(x,y,t,s=10,f=G,a="start",w=400)=>'<text x="'+x+'" y="'+y+'" font-size="'+s+'" fill="'+f+'" text-anchor="'+a+'" font-weight="'+w+'" font-family="Sora,sans-serif">'+t+'</text>';
+  const frame=(inner,cap)=>'<svg class="viz" viewBox="0 0 320 180" preserveAspectRatio="xMidYMid slice" role="img" aria-label="'+cap+'"><rect width="320" height="180" fill="#151517"/><g stroke="#FFFFFF" stroke-opacity=".06">'+[36,72,108,144].map(y=>'<path d="M0 '+y+'H320"/>').join("")+[64,128,192,256].map(x=>'<path d="M'+x+' 0V180"/>').join("")+'</g>'+inner+txt(16,166,cap,9.5)+'</svg>';
+  const lamp=(x,y,c=T,r=4)=>'<circle cx="'+x+'" cy="'+y+'" r="'+(r+4)+'" fill="'+c+'" opacity=".18"/><circle cx="'+x+'" cy="'+y+'" r="'+r+'" fill="'+c+'"/>';
+  return {
+    bars(vals,hi,big,cap){const w=200/vals.length,m=Math.max(...vals);return frame(vals.map((v,i)=>{const h=v/m*96;return '<rect class="vz-grow" style="animation-delay:'+(i*90)+'ms" x="'+(96+i*w)+'" y="'+(140-h)+'" width="'+(w-8)+'" height="'+h+'" rx="2" fill="'+(i===hi?O:"#3A3A3E")+'"/>'}).join("")+txt(16,58,big,30,W,"start",600),cap)},
+    growth(a,b,cap){let d="M96 138";const pts=[];for(let i=0;i<=8;i++){const x=96+i*25,y=138-Math.pow(i/8,2.1)*96;pts.push([x,y]);d+="L"+x+" "+y.toFixed(1)}
+      return frame('<path class="vz-draw" d="'+d+'" fill="none" stroke="'+T+'" stroke-width="2.5" pathLength="1"/>'+pts.map((p,i)=>i%2?"":'<circle cx="'+p[0]+'" cy="'+p[1].toFixed(1)+'" r="2.5" fill="'+T+'"/>').join("")+lamp(296,42,O,5)+txt(16,134,a,16,G,"start",500)+txt(16,58,b,34,W,"start",600),cap)},
+    gauge(v,big,cap){const ang=Math.PI*(1-v/100),x=200+70*Math.cos(ang),y=132-70*Math.sin(ang);
+      return frame('<path d="M130 132A70 70 0 0 1 270 132" fill="none" stroke="#3A3A3E" stroke-width="9"/><path d="M130 132A70 70 0 0 1 270 132" fill="none" stroke="'+G+'" stroke-width="9" stroke-dasharray="1.5 20.5"/><line class="vz-needle" style="--a:-'+(v*1.8).toFixed(0)+'deg" x1="200" y1="132" x2="'+x.toFixed(1)+'" y2="'+y.toFixed(1)+'" stroke="'+O+'" stroke-width="3" stroke-linecap="round"/><circle cx="200" cy="132" r="6" fill="'+W+'"/>'+txt(16,58,big,30,W,"start",600),cap)},
+    timeline(marks,total,unit,cap){const x=t=>40+t/total*240;let s='<path d="M40 96H280" stroke="#3A3A3E" stroke-width="3"/><path class="vz-draw" d="M40 96H280" stroke="'+T+'" stroke-width="3" pathLength="1"/>';
+      for(let i=0;i<=total;i++)s+='<path d="M'+x(i)+' 90V102" stroke="'+G+'"/>';
+      marks.forEach((m,i)=>{s+='<g class="vz-pop" style="animation-delay:'+Math.round(m[0]/total*1500)+'ms">'+lamp(x(m[0]),96,i===marks.length-1?O:T,5)+'</g>'+txt(x(m[0]),i%2?124:76,m[1],10,W,m[0]===0?"start":m[0]===total?"end":"middle",500)});
+      return frame(s+txt(16,36,total+" "+unit,20,W,"start",600),cap)},
+    grid(n,cols,big,cap){let s="";const rows=Math.ceil(n/cols),gx=Math.min(11,180/cols),gy=Math.min(11,100/rows);for(let i=0;i<n;i++){const cx=120+(i%cols)*gx,cy=40+Math.floor(i/cols)*gy;s+='<circle class="vz-pop" style="animation-delay:'+(i*12)+'ms" cx="'+cx.toFixed(1)+'" cy="'+cy.toFixed(1)+'" r="'+(Math.min(gx,gy)*.3).toFixed(1)+'" fill="'+T+'"/>'}
+      return frame(s+txt(16,58,big,34,W,"start",600),cap)},
+    checklist(items,cap){return frame(items.map((it,i)=>{const y=38+i*26;return '<rect x="96" y="'+(y-11)+'" width="200" height="20" rx="3" fill="#1F1F23" stroke="#34343A"/><g class="vz-pop" style="animation-delay:'+(i*320)+'ms">'+lamp(110,y,T,3.5)+'<path d="M107.5 '+y+'l2 2 3.5-4" stroke="#151517" stroke-width="1.4" fill="none"/>'+txt(124,y+3.5,it,9.5,W)+'</g>'}).join("")+txt(16,50,items.length,34,W,"start",600)+txt(16,66,"documents",9.5),cap)},
+    tracker(n,done,cap){let s="";for(let i=0;i<n;i++){const y=30+i*17;s+='<path d="M96 '+(y+8)+'H296" stroke="#2C2C31"/><rect x="100" y="'+(y-3)+'" width="'+(60+((i*37)%50))+'" height="5" rx="2.5" fill="#3A3A3E"/><rect x="214" y="'+(y-3)+'" width="34" height="5" rx="2.5" fill="#3A3A3E"/><g class="vz-pop" style="animation-delay:'+(i*220)+'ms">'+lamp(286,y,i<done?T:O,3)+'</g>'}
+      return frame(s+txt(16,58,"1",34,W,"start",600)+txt(16,74,"shared list",9.5),cap)},
+    cadence(big,cap){let d="M96 96";for(let i=0;i<10;i++){const x=96+i*20;d+="H"+(x+7)+"L"+(x+10)+" 62L"+(x+13)+" 118L"+(x+16)+" 96"}d+="H300";
+      return frame('<path class="vz-draw" d="'+d+'" fill="none" stroke="'+O+'" stroke-width="2" stroke-linejoin="round" pathLength="1"/><circle r="3.5" fill="'+T+'"><animateMotion dur="3.6s" repeatCount="indefinite" path="'+d+'"/></circle>'+txt(16,58,big,26,W,"start",600),cap)},
+    route(nodes,cap){const n=nodes.length,x=i=>56+i*(208/(n-1));let s='<path id="vzr" d="M'+x(0)+' 92'+nodes.slice(1).map((_,i)=>"C"+(x(i)+40)+" "+(i%2?130:54)+" "+(x(i+1)-40)+" "+(i%2?54:130)+" "+x(i+1)+" 92").join("")+'" fill="none" stroke="#4A4A50" stroke-width="2" stroke-dasharray="2 5"/>';
+      s+='<circle r="4" fill="'+O+'"><animateMotion dur="3.2s" repeatCount="indefinite" path="M'+x(0)+' 92'+nodes.slice(1).map((_,i)=>"C"+(x(i)+40)+" "+(i%2?130:54)+" "+(x(i+1)-40)+" "+(i%2?54:130)+" "+x(i+1)+" 92").join("")+'"/></circle>';
+      nodes.forEach((t,i)=>{s+='<circle cx="'+x(i)+'" cy="92" r="13" fill="#1F1F23" stroke="'+(i===n-1?T:"#4A4A50")+'" stroke-width="2"/>'+(i===n-1?lamp(x(i),92,T,4):'<circle cx="'+x(i)+'" cy="92" r="3" fill="'+G+'"/>')+txt(x(i),126,t,10,W,"middle",500)});
+      return frame(s,cap)},
+    clock(cap){const hand=(a,c,l)=>'<line '+(a?'class="vz-tick" ':'')+'x1="200" y1="86" x2="'+(200+l*Math.sin(a)).toFixed(1)+'" y2="'+(86-l*Math.cos(a)).toFixed(1)+'" stroke="'+c+'" stroke-width="3" stroke-linecap="round"/>';
+      return frame('<circle cx="200" cy="86" r="58" fill="#1F1F23" stroke="#4A4A50" stroke-width="2"/><circle cx="200" cy="86" r="50" fill="none" stroke="'+G+'" stroke-width="5" stroke-dasharray="1.5 24.68"/><path d="M200 86L200 36A50 50 0 0 1 225 42.7Z" fill="'+O+'" opacity=".28"/>'+hand(0,T,46)+hand(Math.PI/6,O,46)+'<circle cx="200" cy="86" r="5" fill="'+W+'"/>'+txt(16,58,"1 hr",30,W,"start",600),cap)}
+  }})();
+const VIS={portfolio:()=>VZ.bars([100,84,60,41,33,26,19],2,"#3","ranked third for contracts signed"),ai:()=>VZ.growth("1","70","certified associates across his partners"),pick:()=>VZ.bars([70,52,88,61],1,"3 to 4","bids compared per deal"),
+ approval:()=>VZ.timeline([[0,"ask"],[2,"approved"],[5,"tested"]],5,"days","request to a tested model"),golive:()=>VZ.grid(74,15,"74","phone numbers cleared for go-live"),
+ evidence:()=>VZ.checklist(["requirements approved","build accepted","test checklist","go-live accepted"],"one go-live case per contract"),dates:()=>VZ.timeline([[0,"escalation"],[7,"last item live"]],7,"days","from escalation to scope complete"),
+ gap:()=>VZ.clock("an hour of drift, caught early"),contract:()=>VZ.route(["ticket","contract","decision"],"from access ticket to leadership decision"),tracker:()=>VZ.tracker(7,3,"seven invoice lines, one meeting"),
+ transitions:()=>VZ.growth("0","700+","seats in the largest program"),
+ p1:()=>VZ.cadence("4 years","one weekly rhythm, minutes every time"),p2:()=>VZ.gauge(94.7,"94.7%","forecast accuracy at peak"),p3:()=>VZ.grid(17,6,"17","projects reviewed in one session"),
+ p4:()=>VZ.checklist(["requirements approved","build accepted","test checklist","go-live accepted"],"the go-live evidence standard"),p5:()=>VZ.growth("0","7","engineers certified on Cognigy"),
+ p6:()=>VZ.timeline([[0,"asked"],[5,"voice live"]],5,"days","to unblock their voice lab"),p7:()=>VZ.grid(74,15,"74","numbers unblocked before go-live"),p8:()=>VZ.tracker(7,4,"one tracker for a new partner"),
+ p9:()=>VZ.route(["kickoff","dependencies","go-live"],"two AI self-service projects"),p10:()=>VZ.grid(13,13,"13","partners in all, four of them here")};
+const vis=id=>VIS[id]?'<div class="vizbox">'+VIS[id]()+'</div>':"";
+function handoff(){react("thumbs","wink",2400,true);snd.connect()}
+function bfNod(){}
+/* ---------- render content ---------- */
+const esc=t=>String(t).replace(/&/g,"&amp;").replace(/</g,"&lt;");
+const metricHTML=m=>m.length?'<div class="res">'+m.map(x=>'<div><b>'+esc(x[0])+'</b><span>'+esc(x[1])+'</span></div>').join("")+'</div>':"";
+$("#caseCards").innerHTML=STORIES.map(c=>'<a class="card" href="#case/'+c.id+'" id="c-'+c.id+'">'+vis(c.id)+'<p class="where">'+esc(c.where)+'</p><h3>'+esc(c.title)+'</h3><div class="tags">'+c.tags.map(t=>'<span>'+esc(t)+'</span>').join("")+'</div><p>'+esc(c.situation.split(/(?<=\.)\s/)[0])+'</p>'+metricHTML(c.metrics.slice(0,2))+'<span class="more">Read the story</span></a>').join("");
+$("#partnerCards").innerHTML=PARTNERS.map((p,i)=>'<a class="pcard" href="#partner/'+p.id+'">'+vis(p.id)+'<small>'+(p.num||'Partner '+(i+1))+', '+esc(p.years)+'</small><b>'+esc(p.headline)+'</b><small>'+esc(p.label)+'</small>'+(p.metrics[0]?'<i>'+esc(p.metrics[0][0])+'<span>'+esc(p.metrics[0][1])+'</span></i>':'')+'</a>').join("");
+const CERTS=[
+ ["NICE Certified AI Engineer, Cognigy Associate","2026","https://www.credly.com/badges/e8ea3d10-dcff-442d-b0cd-77b0c25b831f/public_url"],
+ ["NICE Certified Implementation Engineer, CXone Mpower ACD/IVR","2025","https://www.credly.com/badges/b581ee46-7903-4221-be37-2d85fd905e5e/public_url"],
+ ["Lean Six Sigma Yellow Belt","2017",""],
+ ["Project Management Professional (PMP)","In progress",""]];
+$("#certList").innerHTML=CERTS.map(c=>c[2]?'<a href="'+c[2]+'" target="_blank" rel="noopener"><b>'+esc(c[0])+'</b><span>'+esc(c[1])+'</span><em>Verify on Credly</em></a>':'<div><b>'+esc(c[0])+'</b><span>'+esc(c[1])+'</span></div>').join("");
+
+$$(".card,.pcard").forEach(c=>{const v=c.querySelector("svg.viz");if(!v||!v.pauseAnimations)return;v.pauseAnimations();
+  const on=()=>{if(!reduce)v.unpauseAnimations()},off=()=>v.pauseAnimations();c.addEventListener("pointerenter",on);c.addEventListener("focus",on);c.addEventListener("pointerleave",off);c.addEventListener("blur",off)});
+/* ---------- a second, small Orbit follows the page; the hero Orbit never leaves his spot ---------- */
+const fol=orbit.cloneNode(true);fol.removeAttribute("tabindex");fol.setAttribute("aria-hidden","true");document.body.appendChild(fol);
+let fx=0,fy=0,lean=0,aimEl=null,lastY=scrollY,leanT=null,fBody="idle",fFace="eyes",fT=null;
+function fpose(bd,fc){fBody=bd;fFace=fc;fol.setAttribute("class","float b-"+bd+" f-"+fc+(floatOn?" on":"")+(aimEl?" aiming":""))}
+function freact(bd,fc,ms){clearTimeout(fT);fpose(bd,fc);if(ms)fT=setTimeout(()=>fpose(aimEl?"point":"idle",aimEl?"happy":"eyes"),ms)}
+const FW=()=>innerWidth<860?74:118;
+const homePos=()=>{const w=FW();return [innerWidth-w-18,innerHeight-w*1.8-14]};
+function place(){fol.style.transform="translate("+fx.toFixed(0)+"px,"+fy.toFixed(0)+"px) rotate("+lean.toFixed(1)+"deg)"}
+function aim(el){const r=el.getBoundingClientRect(),w=FW(),h=w*1.8;fx=Math.max(8,Math.min(innerWidth-w-8,r.right-w*.5));
+  if(r.height<140){fy=r.top-h+6;if(fy<66){fy=r.top-h*.2;fx=Math.min(innerWidth-w-8,r.right+10);if(fx<r.right)fx=Math.max(8,r.left-w-10)}}
+  else fy=Math.max(66,Math.min(innerHeight-h-8,r.top-w*.75));place()}
+function goHome(){const h=homePos();fx=h[0];fy=h[1];place()}
+function setFloat(on){if(on===floatOn)return;floatOn=on;fol.style.width=FW()+"px";
+  if(on){fol.style.transition="none";fx=homePos()[0];fy=-FW()*2;place();fol.getBoundingClientRect();fol.style.transition="";fpose("idle","happy");goHome()}
+  else{aimEl=null;fy=-FW()*2.2;place();fpose("idle","eyes")}}
+function onScroll(){setFloat(scrollY>$(".hero").offsetHeight*.6);
+  if(!floatOn)return;const dy=scrollY-lastY;lastY=scrollY;lean=Math.max(-12,Math.min(12,dy*.5));
+  if(aimEl)aim(aimEl);else place();clearTimeout(leanT);leanT=setTimeout(()=>{lean=0;place()},160)}
+addEventListener("scroll",onScroll,{passive:true});addEventListener("resize",()=>{fol.style.width=FW()+"px";if(floatOn){aimEl?aim(aimEl):goHome()}});
+let homeT=null;
+$$(".card,.pcard,.lane,#certList a,.cta a").forEach(el=>{
+  el.addEventListener("pointerenter",()=>{if(!floatOn)return;clearTimeout(homeT);const fresh=aimEl!==el;aimEl=el;aim(el);clearTimeout(fT);fpose("point","happy");if(fresh)snd.tick()});
+  el.addEventListener("pointerleave",()=>{if(!floatOn)return;homeT=setTimeout(()=>{aimEl=null;goHome();fpose("idle","eyes")},350)});
+  el.addEventListener("click",()=>{if(floatOn)freact("thumbs","wink",1200)})});
+fol.addEventListener("click",()=>{freact("giggle","happy",1200);snd.giggle()});
+fol.style.width=FW()+"px";fy=-FW()*2.2;fx=homePos()[0];place();fpose("idle","eyes");setTimeout(onScroll,300);
+/* ---------- email links: copy the address, then open the mail app where that is allowed ---------- */
+const MAIL_NAV=true;let toastT=null;
+function toast(html,ms){const t=$("#toast");t.innerHTML=html;t.classList.add("on");clearTimeout(toastT);toastT=setTimeout(()=>t.classList.remove("on"),ms||5000)}
+document.addEventListener("click",e=>{const a=e.target.closest&&e.target.closest('a[href^="mailto:"]');if(!a)return;e.preventDefault();
+  const href=a.getAttribute("href"),addr=href.slice(7).split("?")[0];let copied=false;
+  const done=()=>{toast(copied?"<b>"+addr+"</b> copied to your clipboard"+(MAIL_NAV?". Opening your email app.":"."):"Email Bernard at <b>"+addr+"</b>",6000);if(MAIL_NAV)setTimeout(()=>{location.href=href},350)};
+  try{navigator.clipboard.writeText(addr).then(()=>{copied=true;done()},done)}catch(x){done()}});
+$$('a[href^="http"]').forEach(a=>{a.target="_blank";a.rel="noopener"});
+/* ---------- detail pages (hash routes) ---------- */
+const det=$("#detail"),dbody=$("#dbody");let lastScroll=0;
+function caseHTML(c){const i=STORIES.indexOf(c),prev=STORIES[(i+STORIES.length-1)%STORIES.length],next=STORIES[(i+1)%STORIES.length];
+  const rel=PARTNERS.filter(p=>p.case===c.id);
+  return '<button class="dback" data-back>Back to case studies</button><p class="where">Case study, '+esc(c.where)+'</p><h1>'+esc(c.title)+'</h1><div class="tags">'+c.tags.map(t=>'<span>'+esc(t)+'</span>').join("")+'</div>'+vis(c.id)+metricHTML(c.metrics)+
+  '<h2>What happened</h2><p>'+esc(c.situation)+'</p><h2>What he did</h2><ul>'+c.did.map(d=>'<li>'+esc(d)+'</li>').join("")+'</ul><h2>Result</h2><p>'+esc(c.result)+'</p><p class="shows">'+esc(c.shows)+'</p>'+
+  (rel.length?'<h2>Partner stories behind it</h2><div class="rel">'+rel.map(p=>'<a href="#partner/'+p.id+'">'+esc(p.headline)+'</a>').join("")+'</div>':'')+
+  '<div class="dnav"><a href="#case/'+prev.id+'">Previous: '+esc(prev.title)+'</a><a href="#case/'+next.id+'">Next: '+esc(next.title)+'</a></div><p class="note">Partner and customer names are left out on purpose. Bernard is happy to walk through this story in an interview.</p>'}
+function partnerHTML(p){const i=PARTNERS.indexOf(p),prev=PARTNERS[(i+PARTNERS.length-1)%PARTNERS.length],next=PARTNERS[(i+1)%PARTNERS.length],c=STORIES.find(s=>s.id===p.case);
+  return '<button class="dback" data-back>Back to partner stories</button><p class="where">'+(p.num||'Partner '+(i+1))+' of 13, '+esc(p.label)+', '+esc(p.years)+'</p><h1>'+esc(p.headline)+'</h1>'+vis(p.id)+metricHTML(p.metrics)+
+  '<h2>The partnership</h2><p>'+esc(p.story)+'</p><h2>What he did</h2><ul>'+p.did.map(d=>'<li>'+esc(d)+'</li>').join("")+'</ul><h2>Result</h2><p>'+esc(p.result)+'</p>'+
+  (c?'<h2>Related case study</h2><div class="rel"><a href="#case/'+c.id+'">'+esc(c.title)+'</a></div>':'')+
+  '<div class="dnav"><a href="#partner/'+prev.id+'">Previous: Partner '+((i+PARTNERS.length-1)%PARTNERS.length+1)+'</a><a href="#partner/'+next.id+'">Next: Partner '+((i+1)%PARTNERS.length+1)+'</a></div><p class="note">The partner is described by type, not by name. Figures are Bernard\'s own.</p>'}
+let backTo="work";
+function route(){const h=location.hash.slice(1);const [kind,id]=h.split("/");
+  const item=kind==="case"?STORIES.find(s=>s.id===id):kind==="partner"?PARTNERS.find(p=>p.id===id):null;
+  if(item){if(!det.classList.contains("on"))lastScroll=scrollY;backTo=kind==="case"?"work":"partners";
+    dbody.innerHTML=kind==="case"?caseHTML(item):partnerHTML(item);det.classList.add("on");det.scrollTop=0;document.body.style.overflow="hidden";if(!irising)snd.connect();
+    dbody.querySelector("[data-back]").onclick=()=>irisTo(backTo);dbody.querySelector("h1").setAttribute("tabindex","-1");dbody.querySelector("h1").focus({preventScroll:true});
+    if(kind==="case")seen.add(item.title);else seen.add("Partner story: "+item.headline);}
+  else if(det.classList.contains("on")){det.classList.remove("on");document.body.style.overflow="";const t=document.getElementById(h);if(t)t.scrollIntoView();else scrollTo(0,lastScroll)}}
+/* ---------- signal sweep: full-screen transition on in-page links ---------- */
+const sweep=$("#sweep");let irising=false;
+const DEST={work:"Case studies",partners:"Partner stories",about:"About Bernard",certs:"Certifications",engage:"Work with him",contact:"Contact",top:"Home"};
+function destName(h){const [k,id]=h.split("/");if(k==="case"){const c=STORIES.find(x=>x.id===id);return c?c.title:"Case study"}
+  if(k==="partner"){const i=PARTNERS.findIndex(x=>x.id===id);return i>=0?PARTNERS[i].headline:"Partner story"}return DEST[k]||"Next stop"}
+function irisTo(hash){
+  if(reduce||irising||!sweep.animate){location.hash=hash;return}
+  irising=true;const L=["a","b","c"].map(k=>sweep.querySelector(".sw-"+k)),read=$("#swRead"),mainEl=$("main");
+  $("#swName").textContent=destName(hash);sweep.classList.add("on");mainEl.classList.add("leaving");
+  const E="cubic-bezier(.7,0,.2,1)";
+  [0,70,150].forEach((d,i)=>L[i].animate([{transform:"translateY(116vh)"},{transform:"translateY(-10vh)"}],{duration:620,delay:d,easing:E,fill:"forwards"}));
+  [392,523,659].forEach((f,i)=>tone(f,.5,i*.09,"sine",.035));
+  read.animate([{opacity:0,transform:"translateY(14px)"},{opacity:1,transform:"none"}],{duration:300,delay:520,easing:"ease-out",fill:"forwards"});
+  setTimeout(()=>{root.style.scrollBehavior="auto";location.hash=hash;mainEl.classList.remove("leaving");
+    setTimeout(()=>{root.style.scrollBehavior="";
+      read.animate([{opacity:1},{opacity:0,transform:"translateY(-14px)"}],{duration:220,fill:"forwards"});
+      tone(784,.45,.1,"sine",.035);tone(1046,.5,.2,"sine",.025);
+      const outs=[150,70,0].map((d,i)=>L[i].animate([{transform:"translateY(-10vh)"},{transform:"translateY(-126vh)"}],{duration:640,delay:160+d,easing:E,fill:"forwards"}));
+      outs[0].onfinish=()=>{sweep.classList.remove("on");[...L,read].forEach(el=>el.getAnimations().forEach(a=>a.cancel()));irising=false}},520)},800)}
+document.addEventListener("click",e=>{const a=e.target.closest&&e.target.closest('a[href^="#"]');if(!a)return;const h=a.getAttribute("href").slice(1);if(!h||h===location.hash.slice(1))return;
+  e.preventDefault();irisTo(h)});
+addEventListener("hashchange",route);
+addEventListener("keydown",e=>{if(e.key==="Escape"&&det.classList.contains("on"))location.hash=backTo});
+$("#menuBtn").onclick=()=>{const o=$("#nav").classList.toggle("open");$("#menuBtn").setAttribute("aria-expanded",o);snd.tick()};
+$$("#nav a").forEach(a=>a.addEventListener("click",()=>{$("#nav").classList.remove("open");$("#menuBtn").setAttribute("aria-expanded","false")}));
+
+/* point at hovered case study */
+$$(".card,.pcard").forEach(c=>c.addEventListener("pointerenter",()=>{if(!busy&&!floatOn)react("point","eyes",900)}));
+
+/* point at porthole when About scrolls in */
+if("IntersectionObserver" in window){new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)react("point","happy",1400)}),{threshold:.6}).observe($(".port"))}
+
+/* ---------- conversation: Claude first, local answers as fallback ---------- */
+const CONSULTING=false;if(!CONSULTING)$$("[data-consult]").forEach(e=>e.remove());
+const LOCAL=[
+ {intent:"consulting",route:"Work with him",link:"engage",keys:["consult","advis","freelance","contractor","engagement","project help","bring him in"],
+  a:"Yes, he takes consulting engagements: partner program setup or audits, AI delivery readiness, go-live and escalation recovery, and new program transitions. Tell him about the project at hello@bernardfrancisco.com."},
+ {intent:"ai_delivery",route:"Case study",link:"case/ai",keys:["ai","cognigy","conversational","bot","agent","machine","llm","voice"],
+  a:"He got partner engineers certified on Cognigy conversational AI: Associates went from 1 to 70 and Practitioners from 0 to 6. Partner-led AI engagements grew from 6 in 2025 to 33 in 2026."},
+ {intent:"partner_selection",route:"Case study",link:"case/pick",keys:["bid","select","choose","pick","vendor","award","pricing"],
+  a:"He sits on the buy side of partner bids. Each AI deal went to three or four partners, and he weighed price, level of effort, scope and delivery timeline before anyone won."},
+ {intent:"results",route:"Case study",link:"case/portfolio",keys:["result","revenue","number","impact","achieve","won","sales","money","value"],
+  a:"In 2025 his partner portfolio ranked third of all portfolios for contracts signed, about $6.75M, and he drove five quarter-critical programs worth about $887K to go-live or stabilization."},
+ {intent:"partners",route:"Partner stories",link:"partners",keys:["partner","portfolio","how many","govern"],
+  a:"He managed 13 implementation partners and 700+ partner-led engagements at NICE. Their stories are below, each described by type rather than name."},
+ {intent:"delivery_governance",route:"Case study",link:"case/golive",keys:["go-live","golive","escalat","risk","blocker","deliver","implementation","scope"],
+  a:"He clears go-live blockers across teams he doesn't own. One example: 74 phone numbers blocked two days before a go-live, resolved the same day it reached him."},
+ {intent:"operations_leadership",route:"Case study",link:"case/transitions",keys:["bpo","operation","contact center","call center","transition","seat","sitel","team","lead","people","manage"],
+  a:"Fifteen years leading people in contact centers, and about 10 new client programs brought from contract to steady state at Sitel, the largest over 700 seats."},
+ {intent:"background",route:"About",link:"about",keys:["experience","year","background","who","about","career","history"],
+  a:"Nineteen years in customer experience: contact center operations, client transitions, and since 2022 partner programs for AI and contact center platforms at NICE. He's based in Metro Manila."},
+ {intent:"availability",route:"Contact",link:"contact",keys:["available","availability","hire","hiring","open to","start","remote","relocat","job","role","looking"],
+  a:"Yes. He's looking for his next partner program, partner success or AI delivery role, open to remote work and relocation. Reach him at hello@bernardfrancisco.com."},
+ {intent:"contact",route:"Contact",link:"contact",keys:["email","linkedin","contact","reach","call","talk","meet"],
+  a:"Email hello@bernardfrancisco.com or connect on LinkedIn. Both are at the bottom of the page."},
+ {intent:"certifications",route:"Certifications",link:"certs",keys:["cert","pmp","qualif","credential","six sigma","credly"],
+  a:"NICE Certified AI Engineer (Cognigy Associate), NICE Certified Implementation Engineer for CXone, a Lean Six Sigma Yellow Belt, and he's working toward his PMP."}
+];
+function localMatch(q){q=q.toLowerCase();let best=null,score=0;
+  LOCAL.forEach(k=>{let s=0;k.keys.forEach(w=>{if(q.includes(w))s++});if(s>score){score=s;best=k}});
+  return best?{answer:best.a,intent:best.intent,confidence:Math.min(95,80+score*5),route:best.route,link:best.link}:null}
+
+const CHAT_API="https://api.bernardfrancisco.com/chat";let aiOff=false;
+const history=[];
+function parseReply(t){const m=t.match(/(^|\n)([a-z0-9_ ]{2,40})\|\s*(\d{1,3})\s*\|([^|\n]{2,30})\|([^|\n]{2,30})\n/i);if(!m||/confidence 0-100|intent_label/i.test(m[0]))return null;
+  return {intent:m[2].trim().replace(/\s+/g,"_"),confidence:Math.max(0,Math.min(100,parseInt(m[3])||0)),route:m[4].trim(),link:/^none|null$/i.test(m[5].trim())?null:m[5].trim(),answer:t.slice(m.index+m[0].length).replace(/\u2014|\u2013/g,", ").trim()}}
+function looseReply(t){const ls=t.split("\n");if(ls[0].includes("|"))ls.shift();const answer=ls.join(" ").replace(/\u2014|\u2013/g,", ").trim();return answer?{intent:"general",confidence:75,route:"Answer only",link:null,answer}:null}
+async function askClaude(text,onPart){
+  if(aiOff)return null;
+  try{const res=await fetch(CHAT_API,{method:"POST",headers:{"content-type":"application/json"},body:JSON.stringify({q:text,history:history.slice(-6)})});
+    if(!res.ok||!res.body){if(res.status===429||res.status===503)aiOff=true;return null}
+    const rd=res.body.getReader(),dec=new TextDecoder();let buf="",out="";
+    for(;;){const {done,value}=await rd.read();if(done)break;buf+=dec.decode(value,{stream:true});let i;
+      while((i=buf.indexOf("\n"))>=0){const line=buf.slice(0,i).trim();buf=buf.slice(i+1);if(!line.startsWith("data:"))continue;
+        try{const ev=JSON.parse(line.slice(5));if(ev.type==="content_block_delta"&&ev.delta&&ev.delta.text){out+=ev.delta.text;const j=parseReply(out);if(j&&onPart)onPart(j)}}catch(e){}}}
+    const j=parseReply(out+"\n");return j&&j.answer?j:looseReply(out)}catch(e){return null}}
+
+let persona="look",asked=[],seen=new Set();
+const SUGGEST={
+ hiring:["What has he done with AI?","What results has he delivered?","Is he available?","Browse case studies"],
+ partner:["How does he run partners?","How does he pick partners?","Show the partner stories","Browse case studies"],
+ consult:["What can he consult on?","How does he run partners?","Browse case studies","How do I reach him?"],
+ look:["Who is Bernard?","What has he done with AI?","Browse case studies","How do I reach him?"]
+};
+const log=$("#log"),wait=ms=>new Promise(r=>setTimeout(r,ms));
+function say(cls,html){const d=document.createElement("div");d.className="msg "+cls;d.innerHTML=html;log.appendChild(d);log.scrollTop=log.scrollHeight;return d}
+function lit(n,val){if(n===3){$("#needle").style.transform="rotate("+(-90+(parseInt(val)||0)*1.8)+"deg)"}const s=$("#s"+n);s.classList.add("lit");$("#v"+n).textContent=val;snd.tick()}
+function resetEngine(){[1,2,3,4].forEach(n=>{$("#s"+n).classList.remove("lit");$("#v"+n).textContent="-"});$("#v1").textContent="waiting";$("#needle").style.transform="rotate(-90deg)"}
+function linkLabel(l){if(!l)return null;const [k,id]=l.split("/");
+  if(k==="case"){const c=STORIES.find(s=>s.id===id);return c?"Read the story":null}
+  if(k==="partner"){const p=PARTNERS.find(x=>x.id===id);return p?"Read the partner story":null}
+  return {partners:"See the partner stories",work:"See the case studies",about:"Go to About",certs:"See certifications",contact:"Go to contact",engage:"See ways to work with him"}[k]||null}
+function menuReply(kind){
+  const items=kind==="partners"?PARTNERS.map((p,i)=>'<a href="#partner/'+p.id+'">'+(i+1)+'. '+esc(p.headline)+'</a>'):STORIES.map(c=>'<a href="#case/'+c.id+'">'+esc(c.title)+'</a>');
+  const b=say("bot",(kind==="partners"?"Here are the partner stories. Tap one to open it.":"Here are the case studies. Tap one to open the full story.")+'<div class="chips">'+items.join("")+'</div>');
+  b.querySelectorAll("a").forEach(a=>a.addEventListener("click",snd.connect));react("point","happy",1200,true);snd.chord()}
+let thinking=false;
+async function ask(text){
+  text=text.trim().slice(0,600);if(!text||thinking)return;lastAct=Date.now();
+  if(/^browse case studies$/i.test(text)){say("me",esc(text));asked.push(text);menuReply("work");if(asked.length>=2)$("#wrapBtn").classList.add("on");return}
+  if(/^show the partner stories$/i.test(text)){say("me",esc(text));asked.push(text);menuReply("partners");if(asked.length>=2)$("#wrapBtn").classList.add("on");return}
+  thinking=true;say("me",esc(text));snd.blip();asked.push(text);
+  $("#engine").classList.add("on");resetEngine();
+  hold("think","think");lit(1,"heard you");$("#v2").textContent="thinking...";
+  let bubble=null,shown=false,target="",done=false,nShown=0,revP=null;
+  let reveal;const show=r=>{if(!shown){shown=true;lit(2,r.intent);lit(3,r.confidence+"%");lit(4,r.route);snd.plug();hold("speak","speak");bubble=say("bot","");revP=reveal()}
+    target=r.answer};
+  reveal=async()=>{for(;;){const words=target.split(" ");const lim=done?words.length:words.length-1;
+      if(nShown<lim){nShown++;bubble.textContent=words.slice(0,nShown).join(" ");log.scrollTop=log.scrollHeight;await wait(reduce?0:38)}
+      else if(done)return;else await wait(30)}};
+  let r=await askClaude(text,show);
+  if(!r){r=localMatch(text);if(r)show(r)}else show(r);
+  done=true;
+  if(!r||r.confidence<35){if(!shown){lit(2,"unknown");lit(3,"20%");lit(4,"Hand off to Bernard")}snd.wow();handoff();
+    if(!bubble)say("bot","I don't have that one. Bernard can answer it directly at <a href='mailto:hello@bernardfrancisco.com'>hello@bernardfrancisco.com</a>.");else await revP;
+    history.push({r:"u",t:text},{r:"a",t:r?r.answer:"no answer"});thinking=false;return}
+  await revP;
+  snd.chord();const b=bubble;
+  const lbl=(/^(case|partner)\//.test(r.link||"")||document.getElementById(r.link||"-"))?linkLabel(r.link):null;
+  if(lbl){const a=document.createElement("a");a.href="#"+r.link;a.textContent=lbl;a.onclick=()=>snd.connect();b.append(" ");b.appendChild(a);log.scrollTop=log.scrollHeight;seen.add(r.route+(r.link?" ("+lbl.toLowerCase()+")":""))}
+  history.push({r:"u",t:text},{r:"a",t:r.answer});
+  if(/hand off|contact|work with him/i.test(r.route)||/^(contact|engage)$/.test(r.link||""))handoff();else{react("idle","happy",900,true);bfNod()}
+  if(asked.length>=2)$("#wrapBtn").classList.add("on");
+  thinking=false;
+}
+function startChat(p){persona=p;$("#intro").style.display="none";$("#chat").classList.add("on");
+  snd.connect();react("point","happy",1200,true);
+  say("bot",(p==="hiring"?"Great. ":p==="partner"?"Welcome. ":p==="consult"?"Good to have you. ":"Welcome in. ")+"I'm Orbit, Bernard's AI assistant. Ask me anything about his work, or tap a question below.");
+  const s=$("#suggest");s.innerHTML="";SUGGEST[p].forEach(q=>{const b=document.createElement("button");b.textContent=q;b.onclick=()=>ask(q);s.appendChild(b)});
+  setTimeout(()=>$("#q").focus({preventScroll:true}),100)}
+$$(".ivr button").forEach(b=>b.onclick=()=>startChat(b.dataset.p));
+$("#ask").addEventListener("submit",e=>{e.preventDefault();const v=$("#q").value;$("#q").value="";ask(v)});
+$("#q").addEventListener("input",()=>{if(!thinking&&!busy)hold("listen","eyes");clearTimeout(window._lt);window._lt=setTimeout(()=>{if(!thinking)pose("idle","eyes")},1500)});
+
+/* voice input */
+const SR=window.SpeechRecognition||window.webkitSpeechRecognition;
+if(!SR)$("#mic").style.display="none";else{
+  const rec=new SR();rec.lang="en-US";rec.interimResults=false;
+  rec.onresult=e=>{$("#mic").classList.remove("rec");ask(e.results[0][0].transcript)};
+  rec.onend=()=>$("#mic").classList.remove("rec");
+  $("#mic").onclick=()=>{try{rec.start();$("#mic").classList.add("rec");hold("listen","eyes");snd.blip()}catch(e){}}}
+
+/* chat summary */
+$("#wrapBtn").onclick=()=>{
+  $("#ticket").innerHTML="<b>Questions asked</b><ul>"+asked.map(q=>"<li>"+q.replace(/</g,"&lt;")+"</li>").join("")+"</ul><br><b>Stories you opened</b><ul>"+([...seen].map(s=>"<li>"+esc(s)+"</li>").join("")||"<li>None yet</li>")+"</ul>";
+  $("#sum").classList.add("on");react("wave","happy",2400,true);snd.chord();setTimeout(snd.ding,400)};
+$("#closeSum").onclick=()=>{$("#sum").classList.remove("on");snd.tick()};
+$("#sum").addEventListener("click",e=>{if(e.target.id==="sum")$("#sum").classList.remove("on")});
+route();
 })();
 </script>
 </body>
