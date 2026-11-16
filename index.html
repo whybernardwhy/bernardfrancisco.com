@@ -455,6 +455,19 @@ html[data-time="night"] #orbit{filter:drop-shadow(16px 22px 24px rgba(0,0,0,.6))
 .toast{position:fixed;left:50%;bottom:26px;transform:translate(-50%,20px);z-index:45;padding:12px 18px;border-radius:12px;font-weight:500;font-size:.92rem;opacity:0;pointer-events:none;transition:.35s;max-width:min(92vw,520px);text-align:center;user-select:all}
 .toast.on{opacity:1;transform:translate(-50%,0);pointer-events:auto}
 .toast b{font-weight:600}
+
+/* phone layout: engine sits under Orbit as a compact strip, never over the chat */
+@media (max-width:860px){
+  .stage{flex-direction:column;align-items:center;justify-content:flex-end;height:auto;min-height:0;padding-top:8px}
+  .stage #orbit{height:44vh;min-height:280px;max-height:420px}
+  .engine,.engine.glass{position:static;order:2;width:100%;margin:10px 0 0;padding:8px 14px;display:none;transform:none;opacity:1;border-radius:14px}
+  .engine.on{display:grid;grid-template-columns:1fr 1fr;column-gap:16px}
+  .engine h2,.engine .gauge{display:none}
+  .engine .step{border-top:0;padding:5px 0;font-size:.78rem;min-width:0}
+  .engine .step b{max-width:58%}
+  .hero-inner{padding-top:64px}
+  .p-type>rect:first-child,.p-type .ln,.p-type .cur{display:none}
+}
 </style>
 </head>
 <body>
