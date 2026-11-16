@@ -1111,6 +1111,7 @@ if("IntersectionObserver" in window){new IntersectionObserver(es=>es.forEach(e=>
 
 /* ---------- conversation: Claude first, local answers as fallback ---------- */
 const CONSULTING=false;if(!CONSULTING)$$("[data-consult]").forEach(e=>e.remove());
+$$(".ivr .key").forEach((k,i)=>{k.textContent=i+1});
 const LOCAL=[
  {intent:"consulting",route:"Work with him",link:"engage",keys:["consult","advis","freelance","contractor","engagement","project help","bring him in"],
   a:"Yes, he takes consulting engagements: partner program setup or audits, AI delivery readiness, go-live and escalation recovery, and new program transitions. Tell him about the project at hello@bernardfrancisco.com."},
