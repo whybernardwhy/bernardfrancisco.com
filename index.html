@@ -568,6 +568,20 @@ html[data-time="night"] .card,html[data-time="night"] .pcard,html[data-time="nig
 /* top bar: same glass as the panels once the page scrolls */
 .top.scrolled{background:linear-gradient(180deg,color-mix(in srgb,var(--paper) 74%,transparent),color-mix(in srgb,var(--paper) 58%,transparent));-webkit-backdrop-filter:blur(22px) saturate(150%) brightness(1.04);backdrop-filter:blur(22px) saturate(150%) brightness(1.04);box-shadow:inset 0 -1px 0 var(--glass-edge),0 10px 30px -18px rgba(28,28,30,.35)}
 @media (max-width:860px),(pointer:coarse){.top.scrolled{-webkit-backdrop-filter:none;backdrop-filter:none;background:color-mix(in srgb,var(--paper) 96%,transparent)}}
+
+/* story pages: same sky backdrop and glass as the home page */
+.detail{background:radial-gradient(52vw 52vw at 2% 4%,color-mix(in srgb,var(--hz1) 75%,transparent),transparent 70%),radial-gradient(44vw 44vw at 100% 38%,color-mix(in srgb,var(--signal) 40%,transparent),transparent 70%),radial-gradient(50vw 50vw at 42% 108%,color-mix(in srgb,var(--ai-lamp) 34%,transparent),transparent 70%),linear-gradient(180deg,color-mix(in srgb,var(--hz2) 55%,var(--paper)),var(--paper) 55%,color-mix(in srgb,var(--hz3) 60%,var(--paper)))}
+html[data-time="night"] .detail{background:radial-gradient(52vw 52vw at 2% 4%,color-mix(in srgb,var(--hz2) 80%,transparent),transparent 70%),radial-gradient(44vw 44vw at 100% 38%,color-mix(in srgb,var(--signal) 22%,transparent),transparent 70%),radial-gradient(50vw 50vw at 42% 108%,color-mix(in srgb,var(--ai-lamp) 18%,transparent),transparent 70%),var(--paper)}
+.dwrap{max-width:860px;position:relative;padding:40px 48px 44px;border-radius:28px;background:linear-gradient(135deg,color-mix(in srgb,var(--glass) 140%,transparent),var(--glass) 45%,color-mix(in srgb,var(--glass) 70%,transparent));
+  -webkit-backdrop-filter:blur(22px) saturate(140%) brightness(1.04);backdrop-filter:blur(22px) saturate(140%) brightness(1.04);border:1px solid var(--glass-edge);
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.9),inset 0 -1px 0 rgba(255,255,255,.25),inset 0 0 22px rgba(255,255,255,.18),0 26px 60px -22px rgba(28,28,30,.4),0 2px 8px rgba(28,28,30,.08)}
+html[data-time="night"] .dwrap{box-shadow:inset 0 1px 0 rgba(255,255,255,.2),inset 0 0 22px rgba(255,255,255,.04),0 26px 60px -22px rgba(0,0,0,.8)}
+.detail .res div,.detail .rel a,.detail .dback,.detail .tags span{background:color-mix(in srgb,var(--white) 55%,transparent);border-color:var(--glass-edge);box-shadow:inset 0 1px 0 rgba(255,255,255,.7),0 6px 16px -10px rgba(28,28,30,.3)}
+html[data-time="night"] .detail .res div,html[data-time="night"] .detail .rel a,html[data-time="night"] .detail .dback,html[data-time="night"] .detail .tags span{box-shadow:inset 0 1px 0 rgba(255,255,255,.12)}
+.detail .dnav{border-top-color:var(--glass-edge)}
+.detail h1:focus{outline:none}
+@media (max-width:860px),(pointer:coarse){.dwrap{-webkit-backdrop-filter:none;backdrop-filter:none;background:color-mix(in srgb,var(--white) 78%,transparent)}}
+@media (max-width:860px){.detail{padding-left:12px;padding-right:12px}.dwrap{padding:24px 20px 28px;border-radius:20px}}
 </style>
 </head>
 <body>
