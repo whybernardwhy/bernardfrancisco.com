@@ -499,6 +499,10 @@ html.heropaused .room *,html.heropaused .stage #orbit *{animation-play-state:pau
 #orbit{outline:none;-webkit-tap-highlight-color:transparent;-webkit-user-select:none;user-select:none;-webkit-touch-callout:none}
 #orbit:focus,#orbit:focus-visible{outline:none}
 #orbit:focus-visible #chestlight{stroke:var(--ai-lamp);stroke-width:4}
+
+/* chest light answers a click or tap with a teal pulse */
+#orbit[data-tap] #chestlight{animation:tapglow .8s ease-out}
+@keyframes tapglow{0%{stroke:var(--ai-lamp);stroke-width:7;fill:var(--ai-lamp)}60%{stroke:var(--ai-lamp);stroke-width:3;fill:#F2541B}100%{stroke:var(--ai-lamp);stroke-width:0}}
 </style>
 </head>
 <body>
@@ -1078,6 +1082,8 @@ $$(".card,.pcard,.lane,#certList a,.cta a").forEach(el=>{
   el.addEventListener("pointerleave",()=>{if(!floatOn)return;homeT=setTimeout(()=>{aimEl=null;goHome();fpose("idle","eyes")},350)});
   el.addEventListener("click",()=>{if(floatOn)freact("thumbs","wink",1200)})});
 fol.addEventListener("click",()=>{freact("giggle","happy",1200);snd.giggle()});
+/* chest light pulse on click or tap */
+document.querySelectorAll("#orbit").forEach(o=>o.addEventListener("pointerdown",()=>{delete o.dataset.tap;void o.getBoundingClientRect();o.dataset.tap="1";clearTimeout(o._tapT);o._tapT=setTimeout(()=>{delete o.dataset.tap},850)}));
 fol.style.width=FW()+"px";fy=-FW()*2.2;fx=homePos()[0];place();fpose("idle","eyes");setTimeout(onScroll,300);
 /* ---------- email links: copy the address, then open the mail app where that is allowed ---------- */
 const MAIL_NAV=true;let toastT=null;
